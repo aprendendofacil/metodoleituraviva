@@ -6,9 +6,8 @@
 <title>Método Leitura Viva — Seu Filho Lendo em 21 Dias</title>
 <meta name="description" content="Kit de atividades que ensina crianças de 3 a 8 anos a ler em casa, em 15 minutos por dia.">
 
-<!-- FACEBOOK PIXEL — troque YOUR_PIXEL_ID -->
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1628892878169357');fbq('track','PageView');</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1628892878169357&ev=PageView&noscript=1"/></noscript>
 
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -23,14 +22,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;900&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* =============================================
-   PALETA: Laranja quente + Amarelo mel + Verde (só botões)
-   #FF6B35 laranja principal
-   #FFD023 amarelo / destaque
-   #2DCB6E verde exclusivo botões
-   Fundo: #FFF8EC creme / #fff branco
-   Texto: #2A1F0E escuro / #5C4A2A médio
-============================================= */
 :root{
   --la:#FF6B35; --la2:#E55520;
   --am:#FFD023; --am2:#F5B800;
@@ -46,11 +37,9 @@ body{font-family:'Nunito',sans-serif;background:var(--cr);color:var(--tx);overfl
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
-/* TOPBAR */
 .topbar{background:var(--la);color:#fff;text-align:center;padding:10px 16px;font-family:'Baloo 2',cursive;font-weight:700;font-size:.82rem;letter-spacing:.3px}
 .topbar b{color:var(--am)}
 
-/* HERO */
 .hero{background:var(--cr);padding:36px 0 28px;border-bottom:3px solid var(--brd)}
 .hero-badge{display:inline-flex;align-items:center;gap:5px;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800;font-size:.74rem;padding:4px 14px;border-radius:60px;margin-bottom:16px;letter-spacing:.5px;text-transform:uppercase}
 .hero h1{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.75rem,5.5vw,2.6rem);line-height:1.15;margin-bottom:12px;color:var(--tx)}
@@ -63,7 +52,6 @@ img{max-width:100%;display:block}
 .stat-l{font-size:.67rem;font-weight:800;color:var(--txl);line-height:1.3;margin-top:2px}
 .stat-sep{width:1px;background:var(--brd);flex-shrink:0}
 
-/* BUTTONS */
 .btn{
   display:flex;align-items:center;justify-content:center;
   font-family:'Baloo 2',cursive;font-weight:900;
@@ -81,7 +69,6 @@ img{max-width:100%;display:block}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.022)}}
 .btn-sub{text-align:center;font-size:.74rem;color:var(--txl);margin-top:8px;font-weight:700}
 
-/* SEÇÕES */
 .sec{padding:36px 0}
 .sec-alt{background:var(--wh)}
 .sec-warm{background:#FFF3E0}
@@ -89,21 +76,18 @@ img{max-width:100%;display:block}
 .sec-title{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.4rem,4.5vw,1.9rem);color:var(--tx);line-height:1.2;margin-bottom:18px}
 .sec-title em{font-style:normal;color:var(--la)}
 
-/* DOR */
 .dor-list{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
 .dor-item{display:flex;align-items:flex-start;gap:12px;background:#FFF5F0;border-left:4px solid var(--la);border-radius:0 12px 12px 0;padding:13px 15px;font-size:.9rem;font-weight:700;line-height:1.5;color:var(--tx)}
 .dor-item .di{font-size:1.3rem;flex-shrink:0;margin-top:1px}
 .culpa-box{background:var(--la);color:#fff;border-radius:16px;padding:20px 18px;text-align:center;font-size:.92rem;font-weight:700;line-height:1.65}
 .culpa-box em{font-style:normal;color:var(--am)}
 
-/* SOLUÇÃO */
 .sol-box{background:var(--wh);border:3px solid var(--am);border-radius:20px;padding:22px 18px;box-shadow:0 4px 20px rgba(255,208,35,.15)}
 .sol-badge{display:inline-flex;align-items:center;gap:6px;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800;font-size:.95rem;padding:6px 16px;border-radius:10px;margin-bottom:14px}
 .sol-list{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:.9rem;font-weight:700;line-height:1.5}
 .sol-list li{display:flex;align-items:flex-start;gap:8px}
 .sol-list li::before{content:'✓';color:var(--vd2);font-weight:900;flex-shrink:0;margin-top:1px}
 
-/* CONTEÚDO GRID */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
 @media(max-width:440px){.grid2{grid-template-columns:1fr}}
 .cc{background:var(--wh);border-radius:14px;padding:16px 13px;box-shadow:0 2px 12px rgba(42,31,14,.08);border-top:4px solid var(--am)}
@@ -111,7 +95,6 @@ img{max-width:100%;display:block}
 .cc-t{font-family:'Baloo 2',cursive;font-weight:800;font-size:.9rem;margin-bottom:4px;color:var(--tx)}
 .cc-d{font-size:.8rem;color:var(--txl);line-height:1.4}
 
-/* DEPOIMENTOS */
 .dep-grid{display:flex;flex-direction:column;gap:12px;margin-top:16px}
 .fb-wrap{background:#F0F2F5;border-radius:14px;padding:12px}
 .fb-hdr{display:flex;align-items:center;gap:6px;font-size:.7rem;color:#65676B;font-weight:800;margin-bottom:10px}
@@ -126,7 +109,6 @@ img{max-width:100%;display:block}
 .dep-text{font-size:.87rem;line-height:1.55;color:var(--tx)}
 .dep-react{margin-top:8px;font-size:.75rem;color:#888;display:flex;gap:10px}
 
-/* URGÊNCIA */
 .urgencia{background:var(--la);color:#fff;padding:36px 0;text-align:center}
 .u-title{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.3rem,4.5vw,1.9rem);color:var(--am);margin-bottom:6px;line-height:1.2}
 .u-sub{font-size:.9rem;opacity:.9;margin-bottom:22px;line-height:1.5}
@@ -140,41 +122,20 @@ img{max-width:100%;display:block}
 @keyframes fillBar{from{width:0}}
 .est-lbl{font-size:.74rem;font-weight:800;color:var(--am);opacity:.9}
 
-/* OFERTA */
 .oferta-card{background:var(--wh);border-radius:20px;padding:24px 18px;box-shadow:0 8px 36px rgba(42,31,14,.12);border:3px solid var(--am);position:relative;margin-top:20px}
 .of-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--la);color:#fff;font-family:'Baloo 2',cursive;font-weight:900;font-size:.74rem;padding:4px 18px;border-radius:60px;white-space:nowrap;letter-spacing:.3px}
 .of-title{font-family:'Baloo 2',cursive;font-weight:900;font-size:1.2rem;margin-bottom:4px;color:var(--tx)}
 .of-de{font-size:.82rem;color:#bbb;text-decoration:line-through;margin-bottom:2px}
 .of-preco{font-family:'Baloo 2',cursive;font-weight:900;font-size:2.8rem;color:var(--la);line-height:1;margin-bottom:4px}
 .of-parcelas{font-size:.8rem;color:var(--txl);margin-bottom:16px;font-weight:700}
-
-/* Itens da oferta — cada item em bloco, não inline */
 .of-itens{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
-.of-itens li{
-  display:flex;
-  align-items:flex-start;
-  gap:8px;
-  font-size:.88rem;
-  font-weight:700;
-  line-height:1.45;
-  color:var(--tx);
-  word-break:break-word;
-}
+.of-itens li{display:flex;align-items:flex-start;gap:8px;font-size:.88rem;font-weight:700;line-height:1.45;color:var(--tx);word-break:break-word}
 .of-itens li .oi{flex-shrink:0;margin-top:1px}
-.of-itens li .iv{
-  display:block;
-  font-size:.73rem;
-  color:#bbb;
-  text-decoration:line-through;
-  font-weight:400;
-  margin-top:1px;
-}
-
+.of-itens li .iv{display:block;font-size:.73rem;color:#bbb;text-decoration:line-through;font-weight:400;margin-top:1px}
 .val-box{background:var(--cr);border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-weight:800;font-size:.88rem;gap:8px;flex-wrap:wrap}
 .val-de{color:#bbb;text-decoration:line-through;font-size:.8rem}
 .val-por{color:var(--la);font-family:'Baloo 2',cursive;font-size:1.1rem;font-weight:900}
 
-/* BÔNUS */
 .bonus-grid{display:flex;flex-direction:column;gap:10px;margin-top:14px}
 .bon{display:flex;gap:13px;align-items:flex-start;background:var(--wh);border-radius:13px;padding:14px;box-shadow:0 2px 10px rgba(42,31,14,.07);border-left:4px solid var(--am)}
 .bon-icon{font-size:1.8rem;flex-shrink:0}
@@ -184,13 +145,11 @@ img{max-width:100%;display:block}
 .bon-v{font-size:.74rem;color:#bbb}
 .bon-v b{color:var(--vd2);font-size:.8rem}
 
-/* GARANTIA */
 .gar-box{background:var(--wh);border:3px dashed var(--am);border-radius:20px;padding:24px 18px;text-align:center}
 .gar-icon{font-size:3rem;margin-bottom:10px}
 .gar-t{font-family:'Baloo 2',cursive;font-weight:900;font-size:1.4rem;color:var(--la);margin-bottom:10px}
 .gar-p{font-size:.9rem;color:var(--tx);line-height:1.7}
 
-/* FAQ */
 .faq-list{display:flex;flex-direction:column;gap:8px;margin-top:14px}
 .faq-item{background:var(--wh);border-radius:13px;overflow:hidden;box-shadow:0 2px 10px rgba(42,31,14,.06)}
 .faq-q{width:100%;background:none;border:none;text-align:left;padding:15px 16px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.88rem;color:var(--tx);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;line-height:1.4}
@@ -200,40 +159,30 @@ img{max-width:100%;display:block}
 .faq-item.open .faq-a{max-height:200px}
 .faq-ai{padding:0 16px 14px}
 
-/* FOOTER CTA */
 .ftrcta{background:var(--la);padding:44px 0 32px;text-align:center;color:#fff}
 .ftrcta h2{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.4rem,4.5vw,2rem);color:var(--am);margin-bottom:10px;line-height:1.2}
 .ftrcta p{font-size:.9rem;opacity:.88;margin-bottom:24px;line-height:1.55}
 .ftrcta .btn-sub{color:rgba(255,255,255,.65)}
 
-/* FOOTER */
 footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;padding:18px;font-size:.72rem;line-height:1.8}
 
-/* STICKY */
 .sticky{position:fixed;bottom:0;left:0;right:0;background:var(--vd);padding:9px 16px;display:none;align-items:center;justify-content:center;z-index:999;box-shadow:0 -4px 18px rgba(0,0,0,.2)}
 .sticky a{color:#fff;font-family:'Baloo 2',cursive;font-weight:900;font-size:.95rem;display:flex;align-items:center;gap:7px}
 @media(max-width:640px){.sticky{display:flex};body{padding-bottom:56px}}
 
-/* TRUST */
 .trust{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:14px}
 .tb{display:flex;align-items:center;gap:4px;font-size:.74rem;font-weight:700;color:var(--txl)}
-
-/* DIVIDER */
-.divider{height:3px;background:var(--brd);border:none;margin:0}
 </style>
 </head>
 <body>
 
-<!-- TOPBAR -->
 <div class="topbar">Promoção ativa: <b>55% OFF</b> somente para quem acessou essa página hoje</div>
 
-<!-- HERO -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-badge">Método Leitura Viva</div>
     <h1>Não Deixe Seu Filho Ficar Para Trás:<br><em>Destrave a Leitura em 21 Dias</em></h1>
     <p class="hero-sub">15 minutos por dia. Sem precisar ser professora. <strong>Resultado garantido ou seu dinheiro de volta.</strong></p>
-
     <div class="stats-row">
       <div class="stat"><div class="stat-n">+2.400</div><div class="stat-l">famílias atendidas</div></div>
       <div class="stat-sep"></div>
@@ -241,27 +190,21 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
       <div class="stat-sep"></div>
       <div class="stat"><div class="stat-n">21 dias</div><div class="stat-l">para 1ª leitura</div></div>
     </div>
-
-    <a href="#oferta" class="btn" onclick="fbq&&fbq('track','InitiateCheckout',{value:24.90,currency:'BRL'})">
-      Quero meu filho lendo agora
-    </a>
+    <a href="#oferta" class="btn">Quero meu filho lendo agora</a>
     <div class="btn-sub">Compra 100% segura · Acesso imediato</div>
   </div>
 </section>
 
-<!-- DOR -->
 <section class="sec sec-alt">
   <div class="wrap">
     <span class="eyebrow">Isso te soa familiar?</span>
     <h2 class="sec-title">Seu filho ainda <em>não lê?</em></h2>
-
     <div class="dor-list">
       <div class="dor-item"><span class="di">😔</span>Ele trava na leitura enquanto os colegas já lêem com facilidade</div>
       <div class="dor-item"><span class="di">😰</span>A lição de casa vira batalha e choro todo dia</div>
       <div class="dor-item"><span class="di">😟</span>Você tenta ajudar mas não sabe por onde começar</div>
       <div class="dor-item"><span class="di">⏰</span>Cada semana que passa é tempo que não volta</div>
     </div>
-
     <div class="culpa-box">
       <em>Não é culpa sua não saber como ajudar.</em><br>
       Mas agora você tem um método simples, lúdico e testado por mais de 2.400 famílias. <em>Você pode mudar isso hoje.</em>
@@ -269,7 +212,6 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
-<!-- SOLUÇÃO -->
 <section class="sec">
   <div class="wrap">
     <span class="eyebrow">A solução</span>
@@ -287,7 +229,6 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
-<!-- CONTEÚDO -->
 <section class="sec sec-alt">
   <div class="wrap">
     <span class="eyebrow">O que está no kit</span>
@@ -303,12 +244,10 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
 <section class="sec sec-warm">
   <div class="wrap">
     <span class="eyebrow">O que as mães dizem</span>
     <h2 class="sec-title">Resultados reais de mães <em>como você</em></h2>
-
     <div class="dep-grid">
 
       <div class="fb-wrap">
@@ -317,11 +256,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
           <div class="dep-top">
             <img class="dep-avatar" src="https://i.ibb.co/hRs23F2d/4m.jpg" alt="Juliana Lima" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-avatar-fallback" style="background:#E8457A;display:none">JL</div>
-            <div>
-              <div class="dep-name">Juliana Lima</div>
-              <div class="dep-stars">★★★★★</div>
-              <div class="dep-time">2 dias atrás</div>
-            </div>
+            <div><div class="dep-name">Juliana Lima</div><div class="dep-stars">★★★★★</div><div class="dep-time">2 dias atrás</div></div>
           </div>
           <div class="dep-text">Minha filha de 5 anos começou a juntar sílabas na primeira semana! Estava desesperada achando que ela tinha algum problema. Era só falta do estímulo certo. 😭❤️</div>
           <div class="dep-react"><span>👍 42</span><span>❤️ 31</span><span>😍 18</span></div>
@@ -334,11 +269,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
           <div class="dep-top">
             <img class="dep-avatar" src="https://i.ibb.co/3yQVc2Q0/5m.jpg" alt="Renata Souza" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-avatar-fallback" style="background:#2E7D32;display:none">RS</div>
-            <div>
-              <div class="dep-name">Renata Souza</div>
-              <div class="dep-stars">★★★★★</div>
-              <div class="dep-time">5 dias atrás</div>
-            </div>
+            <div><div class="dep-name">Renata Souza</div><div class="dep-stars">★★★★★</div><div class="dep-time">5 dias atrás</div></div>
           </div>
           <div class="dep-text">Meu filho de 7 anos leu um texto inteiro pra mim 3 semanas depois de começar. Chorei muito! A professora já tinha me alertado sobre o atraso. Valeu cada centavo. ❤️</div>
           <div class="dep-react"><span>👍 87</span><span>❤️ 64</span><span>😭 23</span></div>
@@ -351,11 +282,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
           <div class="dep-top">
             <img class="dep-avatar" src="https://i.ibb.co/wFTSZZkL/6m.jpg" alt="Carolina Batista" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-avatar-fallback" style="background:#1565C0;display:none">CB</div>
-            <div>
-              <div class="dep-name">Carolina Batista</div>
-              <div class="dep-stars">★★★★★</div>
-              <div class="dep-time">1 semana atrás</div>
-            </div>
+            <div><div class="dep-name">Carolina Batista</div><div class="dep-stars">★★★★★</div><div class="dep-time">1 semana atrás</div></div>
           </div>
           <div class="dep-text">Meu filho tem TDAH e sempre achei que seria impossível ensinar em casa. As atividades são tão lúdicas que ele pede pra fazer. Resultado incrível! 🙌</div>
           <div class="dep-react"><span>👍 119</span><span>❤️ 98</span><span>😍 47</span></div>
@@ -368,11 +295,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
           <div class="dep-top">
             <img class="dep-avatar" src="https://i.ibb.co/4nVntYhK/7m.jpg" alt="Priscila Mendes" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-avatar-fallback" style="background:#E65100;display:none">PM</div>
-            <div>
-              <div class="dep-name">Priscila Mendes</div>
-              <div class="dep-stars">★★★★★</div>
-              <div class="dep-time">2 semanas atrás</div>
-            </div>
+            <div><div class="dep-name">Priscila Mendes</div><div class="dep-stars">★★★★★</div><div class="dep-time">2 semanas atrás</div></div>
           </div>
           <div class="dep-text">Minha filha de 6 anos leu o nome dela sozinha hoje de manhã. Foi a coisa mais linda que já vi. Quem não comprar esse método não quer ver o filho crescer! 😂❤️</div>
           <div class="dep-react"><span>👍 203</span><span>❤️ 178</span><span>😂 56</span></div>
@@ -383,7 +306,6 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
-<!-- URGÊNCIA -->
 <section class="urgencia">
   <div class="wrap">
     <h2 class="u-title">Oferta por tempo limitado</h2>
@@ -396,25 +318,20 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
     <p class="est-lbl">78% dos acessos desta semana já foram reservados</p>
     <div class="est-bar"><div class="est-fill"></div></div>
     <br><br>
-    <a href="#oferta" class="btn" style="max-width:400px" onclick="fbq&&fbq('track','InitiateCheckout',{value:24.90,currency:'BRL'})">
-      Garantir meu acesso agora
-    </a>
+    <a href="#oferta" class="btn" style="max-width:400px">Garantir meu acesso agora</a>
   </div>
 </section>
 
-<!-- OFERTA -->
 <section class="sec" id="oferta">
   <div class="wrap">
     <span class="eyebrow">Sua oferta</span>
     <h2 class="sec-title">Invista no futuro do seu filho <em>hoje</em></h2>
-
     <div class="oferta-card">
       <div class="of-badge">Mais escolhido pelas mães</div>
       <div class="of-title">Super Combo Leitura Viva</div>
       <div class="of-de">De R$ 57,00</div>
       <div class="of-preco">R$ 24,90</div>
       <div class="of-parcelas">Pagamento único · Acesso vitalício · Lançamentos futuros grátis</div>
-
       <ul class="of-itens">
         <li><span class="oi">✅</span><span>Todos os 6 Módulos com mais de 200 atividades <span class="iv">De R$ 197,00</span></span></li>
         <li><span class="oi">✅</span><span>Guia da Mãe passo a passo ilustrado <span class="iv">De R$ 37,00</span></span></li>
@@ -424,19 +341,14 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
         <li><span class="oi">🎁</span><span><strong>Bônus 4:</strong> Calendário de Leitura 30 Dias <span class="iv">De R$ 27,00</span></span></li>
         <li><span class="oi">⭐</span><span>Atualizações futuras do material, grátis para sempre</span></li>
       </ul>
-
       <div class="val-box">
         <span>Valor total do kit</span>
         <span><span class="val-de">R$ 372,00</span> &nbsp; <span class="val-por">R$ 24,90</span></span>
       </div>
-
-      <a href="https://pay.hotmart.com/W106078505S?checkoutMode=10" class="btn" onclick="fbq&&fbq('track','AddToCart',{value:24.90,currency:'BRL',content_name:'Super Combo Leitura Viva'})">
-        Quero o Super Combo
-      </a>
+      <a href="https://pay.hotmart.com/W106078505S?checkoutMode=10" class="btn">Quero o Super Combo</a>
       <div class="btn-sub">Pix · Cartão · Boleto &nbsp;|&nbsp; Acesso imediato</div>
     </div>
 
-    <!-- BÔNUS -->
     <div style="margin-top:32px">
       <h3 style="font-family:'Baloo 2',cursive;font-weight:900;font-size:1.15rem;text-align:center;margin-bottom:14px;color:var(--tx)">Os <span style="color:var(--la)">4 bônus</span> que você leva grátis</h3>
       <div class="bonus-grid">
@@ -456,7 +368,6 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
-<!-- GARANTIA -->
 <section class="sec sec-alt">
   <div class="wrap">
     <div class="gar-box">
@@ -467,7 +378,6 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="sec">
   <div class="wrap">
     <span class="eyebrow">Dúvidas rápidas</span>
@@ -493,19 +403,15 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
-<!-- FOOTER CTA -->
 <section class="ftrcta">
   <div class="wrap">
     <h2>Não deixe seu filho perder<br>essa janela de aprendizado</h2>
     <p>Cada semana sem o estímulo certo é tempo que não volta.<br>Mude isso agora por menos do que um livro.</p>
-    <a href="https://pay.hotmart.com/W106078505S?checkoutMode=10" class="btn" onclick="fbq&&fbq('track','InitiateCheckout',{value:24.90,currency:'BRL'})">
-      Quero meu filho lendo agora
-    </a>
+    <a href="https://pay.hotmart.com/W106078505S?checkoutMode=10" class="btn">Quero meu filho lendo agora</a>
     <div class="btn-sub">Compra segura · Acesso imediato · Garantia 7 dias</div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 Método Leitura Viva — Todos os direitos reservados</p>
   <p>Produto 100% digital. Resultados podem variar conforme frequência de uso.</p>
@@ -513,9 +419,8 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   <p style="margin-top:6px"><a href="#" style="color:rgba(255,255,255,.35);text-decoration:underline">Política de Privacidade</a> · <a href="#" style="color:rgba(255,255,255,.35);text-decoration:underline">Termos de Uso</a></p>
 </footer>
 
-<!-- STICKY BAR -->
 <div class="sticky">
-  <a href="#oferta" onclick="fbq&&fbq('track','InitiateCheckout')">Garantir meu acesso agora</a>
+  <a href="#oferta">Garantir meu acesso agora</a>
 </div>
 
 <script>
