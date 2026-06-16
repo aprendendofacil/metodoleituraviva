@@ -55,11 +55,16 @@ img{max-width:100%;display:block}
 .topbar{background:var(--la);color:#fff;text-align:center;padding:10px 16px;font-family:'Baloo 2',cursive;font-weight:700;font-size:.82rem;letter-spacing:.3px}
 .topbar b{color:var(--am)}
 
+/* HERO */
 .hero{background:var(--cr);padding:36px 0 28px;border-bottom:3px solid var(--brd)}
 .hero-badge{display:inline-flex;align-items:center;gap:5px;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800;font-size:.74rem;padding:4px 14px;border-radius:60px;margin-bottom:16px;letter-spacing:.5px;text-transform:uppercase}
 .hero h1{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.75rem,5.5vw,2.6rem);line-height:1.15;margin-bottom:12px;color:var(--tx)}
 .hero h1 em{font-style:normal;color:var(--la)}
 .hero-sub{font-size:1rem;color:var(--txl);margin-bottom:24px;line-height:1.6;font-weight:700}
+
+/* IMAGEM HERO */
+.hero-img{width:100%;max-width:420px;margin:0 auto 24px;border-radius:18px;overflow:hidden;box-shadow:0 8px 32px rgba(42,31,14,.15);border:3px solid var(--brd)}
+.hero-img img{width:100%;height:auto;display:block}
 
 .stats-row{display:flex;background:var(--wh);border-radius:16px;padding:14px 8px;gap:4px;margin-bottom:24px;box-shadow:0 4px 20px rgba(42,31,14,.09);border:2px solid var(--brd)}
 .stat{flex:1;text-align:center;padding:4px 6px}
@@ -109,6 +114,18 @@ img{max-width:100%;display:block}
 .cc-icon{font-size:1.6rem;margin-bottom:7px}
 .cc-t{font-family:'Baloo 2',cursive;font-weight:800;font-size:.9rem;margin-bottom:4px;color:var(--tx)}
 .cc-d{font-size:.8rem;color:var(--txl);line-height:1.4}
+
+/* REVIEWS CARROSSEL */
+.sec-reviews{background:var(--cr);padding:36px 0;overflow:hidden}
+.carrossel-outer{width:100vw;margin-left:calc(-50vw + 50%);overflow:hidden;position:relative}
+.carrossel-outer::before,
+.carrossel-outer::after{content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none}
+.carrossel-outer::before{left:0;background:linear-gradient(to right,var(--cr),transparent)}
+.carrossel-outer::after{right:0;background:linear-gradient(to left,var(--cr),transparent)}
+.carrossel-track{display:flex;gap:10px;width:max-content;animation:scrollTrack 60s linear infinite}
+.carrossel-track:hover{animation-play-state:paused}
+.carrossel-track img{height:200px;width:auto;border-radius:12px;object-fit:cover;flex-shrink:0;box-shadow:0 4px 16px rgba(42,31,14,.12)}
+@keyframes scrollTrack{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 .dep-grid{display:flex;flex-direction:column;gap:12px;margin-top:16px}
 .fb-wrap{background:#F0F2F5;border-radius:14px;padding:12px}
@@ -187,9 +204,47 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
 
 .trust{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:14px}
 .tb{display:flex;align-items:center;gap:4px;font-size:.74rem;font-weight:700;color:var(--txl)}
+
+/* NOTIFICAÇÃO SOCIAL PROOF */
+.sp-toast{
+  position:fixed;
+  bottom:72px;
+  left:16px;
+  right:16px;
+  max-width:320px;
+  background:#1a7a3c;
+  color:#fff;
+  border-radius:14px;
+  padding:12px 14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  box-shadow:0 6px 28px rgba(0,0,0,.25);
+  z-index:1000;
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity .4s ease,transform .4s ease;
+  pointer-events:none;
+}
+.sp-toast.show{opacity:1;transform:translateY(0)}
+.sp-icon{width:38px;height:38px;border-radius:50%;background:var(--vd);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
+.sp-text{flex:1;min-width:0}
+.sp-text strong{font-family:'Baloo 2',cursive;font-weight:800;font-size:.92rem;display:block;line-height:1.2}
+.sp-text span{font-size:.76rem;opacity:.85;line-height:1.3}
+.sp-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:1rem;cursor:pointer;padding:0 0 0 4px;flex-shrink:0;line-height:1}
 </style>
 </head>
 <body>
+
+<!-- NOTIFICAÇÃO SOCIAL PROOF -->
+<div class="sp-toast" id="spToast">
+  <div class="sp-icon">✓</div>
+  <div class="sp-text">
+    <strong id="spName">Ana Paula</strong>
+    <span>acabou de garantir o Método Leitura Viva</span>
+  </div>
+  <button class="sp-close" onclick="fecharToast()">✕</button>
+</div>
 
 <div class="topbar">Promoção ativa: <b>55% OFF</b> somente para quem acessou essa página hoje</div>
 
@@ -198,6 +253,12 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
     <div class="hero-badge">Método Leitura Viva</div>
     <h1>Não Deixe Seu Filho Ficar Para Trás:<br><em>Destrave a Leitura em 21 Dias</em></h1>
     <p class="hero-sub">15 minutos por dia. Sem precisar ser professora. <strong>Resultado garantido ou seu dinheiro de volta.</strong></p>
+
+    <!-- IMAGEM HERO -->
+    <div class="hero-img">
+      <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/produto.png?raw=true" alt="Método Leitura Viva — Kit completo de atividades">
+    </div>
+
     <div class="stats-row">
       <div class="stat"><div class="stat-n">+2.400</div><div class="stat-l">famílias atendidas</div></div>
       <div class="stat-sep"></div>
@@ -255,6 +316,65 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
       <div class="cc"><div class="cc-icon">📖</div><div class="cc-t">Primeiras Leituras</div><div class="cc-d">Textos curtos para a primeira leitura real</div></div>
       <div class="cc"><div class="cc-icon">✍️</div><div class="cc-t">Grafismo Fonético</div><div class="cc-d">Traçados que preparam o cérebro para ler</div></div>
       <div class="cc"><div class="cc-icon">📋</div><div class="cc-t">Guia da Mãe</div><div class="cc-d">Passo a passo ilustrado, zero experiência necessária</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO DE REVIEWS / CARROSSEL -->
+<section class="sec-reviews">
+  <div class="wrap">
+    <span class="eyebrow">Resultados reais</span>
+    <h2 class="sec-title" style="margin-bottom:20px">Veja o que as mães estão <em>compartilhando</em></h2>
+  </div>
+  <div class="carrossel-outer">
+    <div class="carrossel-track">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed1.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed11.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed12.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed13.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed14.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed15.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed16.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed17.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed19.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed2.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed20.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed21.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed22.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed23.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed24.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed25.jpg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed26.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed27.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed28.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed29.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed3.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed4.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed5.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed6.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed7.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed8.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed9.png?raw=true" alt="">
+      <!-- duplicatas para loop infinito -->
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed1.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed11.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed12.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed13.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed14.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed15.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed16.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed17.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed19.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed2.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed20.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed21.jpeg?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed22.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed23.png?raw=true" alt="">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed9.png?raw=true" alt="">
     </div>
   </div>
 </section>
@@ -445,6 +565,8 @@ function tFaq(btn){
   document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
   if(!was)item.classList.add('open');
 }
+
+// COUNTDOWN
 (function(){
   function getExp(){
     const s=sessionStorage.getItem('lv_exp');
@@ -462,15 +584,85 @@ function tFaq(btn){
   }
   tick();setInterval(tick,1000);
 })();
+
+// PIXEL VIEWCONTENT
 window.addEventListener('load',function(){
-  if(window.fbq)fbq('track','ViewContent',{content_name:'Método Leitura Viva',value:24.90,currency:'BRL'});
+  if(window.fbq)fbq('track','ViewContent',{
+    content_name:'Método Leitura Viva',
+    content_ids:['metodo-leitura-viva'],
+    content_type:'product',
+    value:19.90,
+    currency:'BRL'
+  });
 });
+
+// SCROLL DEPTH
 let t50=false,t75=false;
 window.addEventListener('scroll',function(){
   const p=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
   if(!t50&&p>=50){t50=true;if(window.fbq)fbq('trackCustom','ScrollDepth50')}
   if(!t75&&p>=75){t75=true;if(window.fbq)fbq('trackCustom','ScrollDepth75')}
 });
+
+// SOCIAL PROOF TOAST
+(function(){
+  const nomes = [
+    'Ana Paula','Juliana','Fernanda','Mariana','Camila',
+    'Patrícia','Renata','Beatriz','Larissa','Gabriela',
+    'Tatiane','Luciana','Débora','Vanessa','Cristiane',
+    'Priscila','Simone','Adriana','Mônica','Carolina',
+    'Letícia','Amanda','Bruna','Thais','Viviane',
+    'Raquel','Sandra','Carla','Fabiana','Jéssica'
+  ];
+
+  const toast = document.getElementById('spToast');
+  const spName = document.getElementById('spName');
+  let toastVisible = false;
+  let nomesUsados = [];
+  let intervaloAtual = null;
+
+  function proximoNome(){
+    if(nomesUsados.length >= nomes.length) nomesUsados = [];
+    let disponiveis = nomes.filter(n => !nomesUsados.includes(n));
+    let nome = disponiveis[Math.floor(Math.random() * disponiveis.length)];
+    nomesUsados.push(nome);
+    return nome;
+  }
+
+  function mostrarToast(){
+    if(toastVisible) return;
+    toastVisible = true;
+    spName.textContent = proximoNome();
+    toast.classList.add('show');
+    setTimeout(function(){
+      esconderToast();
+    }, 5000);
+  }
+
+  function esconderToast(){
+    toast.classList.remove('show');
+    toastVisible = false;
+  }
+
+  function fecharToast(){
+    esconderToast();
+  }
+  window.fecharToast = fecharToast;
+
+  // Primeira exibição após 8s
+  setTimeout(function(){
+    mostrarToast();
+    // Após a primeira, repete a cada intervalo aleatório entre 18s e 35s
+    function agendarProxima(){
+      const delay = (Math.random() * 17000) + 18000;
+      intervaloAtual = setTimeout(function(){
+        mostrarToast();
+        agendarProxima();
+      }, delay);
+    }
+    agendarProxima();
+  }, 8000);
+})();
 </script>
 </body>
 </html>
