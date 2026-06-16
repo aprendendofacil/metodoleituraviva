@@ -194,9 +194,10 @@ img{max-width:100%;display:block}
 
 footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;padding:18px;font-size:.72rem;line-height:1.8}
 
-.sticky{position:fixed;bottom:0;left:0;right:0;background:var(--vd);padding:9px 16px;display:none;align-items:center;justify-content:center;z-index:999;box-shadow:0 -4px 18px rgba(0,0,0,.2)}
+.sticky{position:fixed;bottom:0;left:0;right:0;background:var(--vd);padding:9px 16px;display:flex;align-items:center;justify-content:center;z-index:999;box-shadow:0 -4px 18px rgba(0,0,0,.2);transform:translateY(100%);transition:transform .3s ease}
+.sticky.visible{transform:translateY(0)}
 .sticky a{color:#fff;font-family:'Baloo 2',cursive;font-weight:900;font-size:.95rem;display:flex;align-items:center;gap:7px}
-@media(max-width:640px){.sticky{display:flex};body{padding-bottom:56px}}
+body{padding-bottom:56px}
 
 .trust{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:14px}
 .tb{display:flex;align-items:center;gap:4px;font-size:.72rem;font-weight:700;color:var(--txl)}
@@ -561,6 +562,16 @@ function tFaq(btn){var item=btn.closest('.faq-item'),was=item.classList.contains
 window.addEventListener('load',function(){
   if(window.fbq)fbq('track','ViewContent',{content_name:'Método Leitura Viva',content_ids:['metodo-leitura-viva'],content_type:'product',value:19.90,currency:'BRL'});
 });
+
+// STICKY — aparece após sair da primeira dobra (seção hero)
+var stickyEl=document.querySelector('.sticky');
+var heroEl=document.querySelector('.hero');
+function checkSticky(){
+  var heroBottom=heroEl.getBoundingClientRect().bottom;
+  if(heroBottom<0){stickyEl.classList.add('visible')}
+  else{stickyEl.classList.remove('visible')}
+}
+window.addEventListener('scroll',checkSticky,{passive:true});
 
 // SCROLL DEPTH
 var t50=false,t75=false;
