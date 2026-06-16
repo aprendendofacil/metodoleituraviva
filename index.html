@@ -1,48 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Facebook Pixel -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1628892878169357');
-fbq('track', 'PageView');
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1628892878169357&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Método Leitura Viva — Seu Filho Lendo em 21 Dias</title>
 <meta name="description" content="Kit de atividades que ensina crianças de 3 a 8 anos a ler em casa, em 15 minutos por dia.">
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "x00tayclpo");
+
+<!-- Facebook Pixel — async, não bloqueia render -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1628892878169357');
+fbq('track','PageView');
 </script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1628892878169357&ev=PageView&noscript=1"/></noscript>
+
+<!-- Clarity — defer -->
+<script defer>
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","x00tayclpo");
+</script>
+
+<!-- UTMify — defer -->
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids defer></script>
+
+<!-- Fontes: só os pesos usados, display=swap -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;900&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;900&family=Nunito:wght@700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;900&family=Nunito:wght@700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;900&family=Nunito:wght@700;800&display=swap"></noscript>
+
+<!-- Preload da imagem hero (LCP) -->
+<link rel="preload" as="image" href="https://github.com/aprendendofacil/metodoleituraviva/blob/main/produto.png?raw=true">
 
 <style>
-:root{
-  --la:#FF6B35;--la2:#E55520;
-  --am:#FFD023;--am2:#F5B800;
-  --vd:#2DCB6E;--vd2:#1FA855;
-  --tx:#2A1F0E;--txl:#5C4A2A;
-  --cr:#FFF8EC;--wh:#fff;
-  --brd:#F0E8D8;
-}
+:root{--la:#FF6B35;--la2:#E55520;--am:#FFD023;--am2:#F5B800;--vd:#2DCB6E;--vd2:#1FA855;--tx:#2A1F0E;--txl:#5C4A2A;--cr:#FFF8EC;--wh:#fff;--brd:#F0E8D8}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Nunito',sans-serif;background:var(--cr);color:var(--tx);overflow-x:hidden;font-size:16px}
@@ -58,8 +49,10 @@ img{max-width:100%;display:block}
 .hero h1{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.75rem,5.5vw,2.6rem);line-height:1.15;margin-bottom:12px;color:var(--tx)}
 .hero h1 em{font-style:normal;color:var(--la)}
 .hero-sub{font-size:1rem;color:var(--txl);margin-bottom:24px;line-height:1.6;font-weight:700}
-.hero-img{width:100%;max-width:420px;margin:0 auto 24px;border-radius:18px;overflow:hidden;box-shadow:0 8px 32px rgba(42,31,14,.15);border:3px solid var(--brd)}
-.hero-img img{width:100%;height:auto;display:block}
+
+/* Hero img — tamanho fixo para evitar CLS */
+.hero-img{width:100%;max-width:420px;margin:0 auto 24px;border-radius:18px;overflow:hidden;box-shadow:0 8px 32px rgba(42,31,14,.15);border:3px solid var(--brd);aspect-ratio:4/3;background:var(--brd)}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
 
 .stats-row{display:flex;background:var(--wh);border-radius:16px;padding:14px 8px;gap:4px;margin-bottom:24px;box-shadow:0 4px 20px rgba(42,31,14,.09);border:2px solid var(--brd)}
 .stat{flex:1;text-align:center;padding:4px 6px}
@@ -67,7 +60,7 @@ img{max-width:100%;display:block}
 .stat-l{font-size:.67rem;font-weight:800;color:var(--txl);line-height:1.3;margin-top:2px}
 .stat-sep{width:1px;background:var(--brd);flex-shrink:0}
 
-.btn{display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(.95rem,3.5vw,1.15rem);padding:15px 20px;border-radius:60px;border:none;cursor:pointer;width:100%;max-width:460px;margin:0 auto;background:var(--vd);color:#fff;box-shadow:0 5px 0 var(--vd2),0 8px 24px rgba(45,203,110,.3);animation:pulse 2.3s ease-in-out infinite;white-space:nowrap;text-align:center;}
+.btn{display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(.95rem,3.5vw,1.15rem);padding:15px 20px;border-radius:60px;border:none;cursor:pointer;width:100%;max-width:460px;margin:0 auto;background:var(--vd);color:#fff;box-shadow:0 5px 0 var(--vd2),0 8px 24px rgba(45,203,110,.3);animation:pulse 2.3s ease-in-out infinite;white-space:nowrap;text-align:center}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:translateY(2px);box-shadow:0 2px 0 var(--vd2)}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.022)}}
@@ -99,15 +92,14 @@ img{max-width:100%;display:block}
 .cc-t{font-family:'Baloo 2',cursive;font-weight:800;font-size:.9rem;margin-bottom:4px;color:var(--tx)}
 .cc-d{font-size:.8rem;color:var(--txl);line-height:1.4}
 
-/* CARROSSEL */
+/* CARROSSEL — CSS puro, sem JS de scroll */
 .sec-reviews{background:var(--cr);padding:36px 0;overflow:hidden}
 .carrossel-outer{width:100vw;margin-left:calc(-50vw + 50%);overflow:hidden;position:relative}
 .carrossel-outer::before,.carrossel-outer::after{content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none}
 .carrossel-outer::before{left:0;background:linear-gradient(to right,var(--cr),transparent)}
 .carrossel-outer::after{right:0;background:linear-gradient(to left,var(--cr),transparent)}
-.carrossel-track{display:flex;gap:10px;width:max-content;animation:scrollTrack 60s linear infinite}
-.carrossel-track:hover{animation-play-state:paused}
-.carrossel-track img{height:200px;width:auto;border-radius:12px;object-fit:cover;flex-shrink:0;box-shadow:0 4px 16px rgba(42,31,14,.12)}
+.carrossel-track{display:flex;gap:10px;width:max-content;animation:scrollTrack 70s linear infinite;will-change:transform}
+.carrossel-track img{height:180px;width:auto;border-radius:12px;object-fit:cover;flex-shrink:0;box-shadow:0 4px 16px rgba(42,31,14,.12);background:var(--brd)}
 @keyframes scrollTrack{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 .dep-grid{display:flex;flex-direction:column;gap:12px;margin-top:16px}
@@ -116,7 +108,7 @@ img{max-width:100%;display:block}
 .fb-logo{color:#1877F2;font-size:1rem;font-weight:900}
 .dep-card{background:var(--wh);border-radius:10px;padding:13px}
 .dep-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.dep-avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;flex-shrink:0;background:#e0e0e0}
+.dep-avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;flex-shrink:0;background:var(--brd)}
 .dep-avatar-fallback{width:42px;height:42px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',cursive;font-weight:900;font-size:1.1rem;color:#fff}
 .dep-name{font-weight:800;font-size:.88rem;color:var(--tx)}
 .dep-stars{color:var(--am2);font-size:.82rem}
@@ -137,7 +129,6 @@ img{max-width:100%;display:block}
 @keyframes fillBar{from{width:0}}
 .est-lbl{font-size:.74rem;font-weight:800;color:var(--am);opacity:.9}
 
-/* OFERTA CARD — compacto mobile */
 .oferta-card{background:var(--wh);border-radius:18px;padding:18px 14px 20px;box-shadow:0 8px 36px rgba(42,31,14,.12);border:3px solid var(--am);position:relative;margin-top:20px}
 .of-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--la);color:#fff;font-family:'Baloo 2',cursive;font-weight:900;font-size:.7rem;padding:3px 16px;border-radius:60px;white-space:nowrap;letter-spacing:.3px}
 .of-title{font-family:'Baloo 2',cursive;font-weight:900;font-size:1.05rem;margin-bottom:2px;color:var(--tx)}
@@ -189,26 +180,8 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
 .trust{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:14px}
 .tb{display:flex;align-items:center;gap:4px;font-size:.74rem;font-weight:700;color:var(--txl)}
 
-/* SOCIAL PROOF TOAST — compacto, canto inferior esquerdo */
-.sp-toast{
-  position:fixed;
-  bottom:70px;
-  left:12px;
-  width:220px;
-  background:#1a7a3c;
-  color:#fff;
-  border-radius:12px;
-  padding:9px 10px 9px 10px;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  box-shadow:0 4px 20px rgba(0,0,0,.22);
-  z-index:1000;
-  opacity:0;
-  transform:translateY(12px);
-  transition:opacity .35s ease,transform .35s ease;
-  pointer-events:none;
-}
+/* TOAST compacto */
+.sp-toast{position:fixed;bottom:70px;left:12px;width:220px;background:#1a7a3c;color:#fff;border-radius:12px;padding:9px 10px;display:flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.22);z-index:1000;opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
 .sp-toast.show{opacity:1;transform:translateY(0);pointer-events:auto}
 .sp-icon{width:26px;height:26px;border-radius:50%;background:var(--vd);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.75rem;font-weight:900}
 .sp-text{flex:1;min-width:0}
@@ -219,7 +192,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
 </head>
 <body>
 
-<!-- SOCIAL PROOF TOAST -->
+<!-- TOAST -->
 <div class="sp-toast" id="spToast">
   <div class="sp-icon">✓</div>
   <div class="sp-text">
@@ -236,8 +209,12 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
     <div class="hero-badge">Método Leitura Viva</div>
     <h1>Não Deixe Seu Filho Ficar Para Trás:<br><em>Destrave a Leitura em 21 Dias</em></h1>
     <p class="hero-sub">15 minutos por dia. Sem precisar ser professora. <strong>Resultado garantido ou seu dinheiro de volta.</strong></p>
+    <!-- LCP: fetchpriority=high, sem lazy -->
     <div class="hero-img">
-      <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/produto.png?raw=true" alt="Método Leitura Viva — Kit completo de atividades">
+      <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/produto.png?raw=true"
+           alt="Método Leitura Viva — Kit completo de atividades"
+           width="420" height="315"
+           fetchpriority="high">
     </div>
     <div class="stats-row">
       <div class="stat"><div class="stat-n">+2.400</div><div class="stat-l">famílias atendidas</div></div>
@@ -300,61 +277,68 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
-<!-- CARROSSEL DE REVIEWS -->
+<!-- CARROSSEL — imagens com lazy load -->
 <section class="sec-reviews">
   <div class="wrap">
     <span class="eyebrow">Resultados reais</span>
     <h2 class="sec-title" style="margin-bottom:20px">Veja o que as mães estão <em>compartilhando</em></h2>
   </div>
   <div class="carrossel-outer">
-    <div class="carrossel-track">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed1.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed11.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed12.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed13.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed14.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed15.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed16.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed17.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed19.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed2.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed20.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed21.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed22.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed23.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed24.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed25.jpg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed26.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed27.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed28.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed29.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed3.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed4.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed5.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed6.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed7.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed8.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed9.png?raw=true" alt="">
-      <!-- duplicatas loop infinito -->
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed1.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed11.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed12.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed13.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed14.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed15.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed16.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed17.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed19.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed2.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed20.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed21.jpeg?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed22.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed23.png?raw=true" alt="">
-      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed9.png?raw=true" alt="">
+    <div class="carrossel-track" id="carTrack">
+      <!-- Primeiras 6 eager, resto lazy -->
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed1.jpeg?raw=true" alt="" width="135" height="180">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed2.png?raw=true" alt="" width="135" height="180">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed3.png?raw=true" alt="" width="135" height="180">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed4.png?raw=true" alt="" width="135" height="180">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed5.png?raw=true" alt="" width="135" height="180">
+      <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed6.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed7.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed8.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed9.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed11.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed12.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed13.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed14.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed15.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed16.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed17.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed19.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed20.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed21.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed22.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed23.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed24.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed25.jpg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed26.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed27.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed28.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed29.jpeg?raw=true" alt="" width="135" height="180">
+      <!-- duplicatas para loop -->
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed1.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed2.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed3.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed4.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed5.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed6.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed7.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed8.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed9.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed10.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed11.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed12.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed13.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed14.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed15.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed16.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed17.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed19.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed20.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed21.jpeg?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed22.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed23.png?raw=true" alt="" width="135" height="180">
+      <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed29.jpeg?raw=true" alt="" width="135" height="180">
     </div>
   </div>
 </section>
@@ -368,7 +352,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
         <div class="fb-hdr"><span class="fb-logo">f</span> Comentário no Facebook</div>
         <div class="dep-card">
           <div class="dep-top">
-            <img class="dep-avatar" src="https://i.ibb.co/hRs23F2d/4m.jpg" alt="Juliana Lima" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img class="dep-avatar" loading="lazy" src="https://i.ibb.co/hRs23F2d/4m.jpg" alt="Juliana Lima" width="42" height="42" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-avatar-fallback" style="background:#E8457A;display:none">JL</div>
             <div><div class="dep-name">Juliana Lima</div><div class="dep-stars">★★★★★</div><div class="dep-time">2 dias atrás</div></div>
           </div>
@@ -380,7 +364,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
         <div class="fb-hdr"><span class="fb-logo">f</span> Comentário no Facebook</div>
         <div class="dep-card">
           <div class="dep-top">
-            <img class="dep-avatar" src="https://i.ibb.co/3yQVc2Q0/5m.jpg" alt="Renata Souza" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img class="dep-avatar" loading="lazy" src="https://i.ibb.co/3yQVc2Q0/5m.jpg" alt="Renata Souza" width="42" height="42" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-avatar-fallback" style="background:#2E7D32;display:none">RS</div>
             <div><div class="dep-name">Renata Souza</div><div class="dep-stars">★★★★★</div><div class="dep-time">5 dias atrás</div></div>
           </div>
@@ -392,7 +376,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
         <div class="fb-hdr"><span class="fb-logo">f</span> Comentário no Facebook</div>
         <div class="dep-card">
           <div class="dep-top">
-            <img class="dep-avatar" src="https://i.ibb.co/wFTSZZkL/6m.jpg" alt="Carolina Batista" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img class="dep-avatar" loading="lazy" src="https://i.ibb.co/wFTSZZkL/6m.jpg" alt="Carolina Batista" width="42" height="42" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-avatar-fallback" style="background:#1565C0;display:none">CB</div>
             <div><div class="dep-name">Carolina Batista</div><div class="dep-stars">★★★★★</div><div class="dep-time">1 semana atrás</div></div>
           </div>
@@ -404,7 +388,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
         <div class="fb-hdr"><span class="fb-logo">f</span> Comentário no Facebook</div>
         <div class="dep-card">
           <div class="dep-top">
-            <img class="dep-avatar" src="https://i.ibb.co/4nVntYhK/7m.jpg" alt="Priscila Mendes" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img class="dep-avatar" loading="lazy" src="https://i.ibb.co/4nVntYhK/7m.jpg" alt="Priscila Mendes" width="42" height="42" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-avatar-fallback" style="background:#E65100;display:none">PM</div>
             <div><div class="dep-name">Priscila Mendes</div><div class="dep-stars">★★★★★</div><div class="dep-time">2 semanas atrás</div></div>
           </div>
@@ -458,7 +442,6 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
       <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn">Quero o Super Combo</a>
       <div class="btn-sub">Pix · Cartão · Boleto &nbsp;|&nbsp; Acesso imediato</div>
     </div>
-
     <div style="margin-top:28px">
       <h3 style="font-family:'Baloo 2',cursive;font-weight:900;font-size:1.1rem;text-align:center;margin-bottom:12px;color:var(--tx)">Os <span style="color:var(--la)">4 bônus</span> que você leva grátis</h3>
       <div class="bonus-grid">
@@ -468,7 +451,6 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
         <div class="bon"><div class="bon-icon">📅</div><div class="bon-inner"><div class="bon-t">Calendário de Leitura 30 Dias</div><div class="bon-d">Planner para manter a rotina</div><div class="bon-v">De R$ 27,00 — <b>GRÁTIS</b></div></div></div>
       </div>
     </div>
-
     <div class="trust">
       <div class="tb">Compra segura</div>
       <div class="tb">Acesso imediato</div>
@@ -529,90 +511,29 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   <p style="margin-top:6px"><a href="#" style="color:rgba(255,255,255,.35);text-decoration:underline">Política de Privacidade</a> · <a href="#" style="color:rgba(255,255,255,.35);text-decoration:underline">Termos de Uso</a></p>
 </footer>
 
-<div class="sticky">
-  <a href="#oferta">Garantir meu acesso agora</a>
-</div>
+<div class="sticky"><a href="#oferta">Garantir meu acesso agora</a></div>
 
 <script>
-function tFaq(btn){
-  const item=btn.closest('.faq-item');
-  const was=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-  if(!was)item.classList.add('open');
-}
+function tFaq(btn){var item=btn.closest('.faq-item'),was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!was)item.classList.add('open')}
 
 // COUNTDOWN
-(function(){
-  function getExp(){
-    const s=sessionStorage.getItem('lv_exp');
-    if(s)return parseInt(s);
-    const e=Date.now()+(23*3600+59*60+59)*1000;
-    sessionStorage.setItem('lv_exp',e);
-    return e;
-  }
-  const exp=getExp();
-  function tick(){
-    const d=Math.max(0,Math.floor((exp-Date.now())/1000));
-    document.getElementById('cdh').textContent=String(Math.floor(d/3600)).padStart(2,'0');
-    document.getElementById('cdm').textContent=String(Math.floor((d%3600)/60)).padStart(2,'0');
-    document.getElementById('cds').textContent=String(d%60).padStart(2,'0');
-  }
-  tick();setInterval(tick,1000);
-})();
+(function(){function getExp(){var s=sessionStorage.getItem('lv_exp');if(s)return parseInt(s);var e=Date.now()+(23*3600+59*60+59)*1000;sessionStorage.setItem('lv_exp',e);return e}var exp=getExp();function tick(){var d=Math.max(0,Math.floor((exp-Date.now())/1000));document.getElementById('cdh').textContent=String(Math.floor(d/3600)).padStart(2,'0');document.getElementById('cdm').textContent=String(Math.floor((d%3600)/60)).padStart(2,'0');document.getElementById('cds').textContent=String(d%60).padStart(2,'0')}tick();setInterval(tick,1000)})();
 
-// PIXEL
-window.addEventListener('load',function(){
-  if(window.fbq)fbq('track','ViewContent',{
-    content_name:'Método Leitura Viva',
-    content_ids:['metodo-leitura-viva'],
-    content_type:'product',
-    value:19.90,
-    currency:'BRL'
-  });
-});
-let t50=false,t75=false;
-window.addEventListener('scroll',function(){
-  const p=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
-  if(!t50&&p>=50){t50=true;if(window.fbq)fbq('trackCustom','ScrollDepth50')}
-  if(!t75&&p>=75){t75=true;if(window.fbq)fbq('trackCustom','ScrollDepth75')}
-});
+// PIXEL ViewContent
+window.addEventListener('load',function(){if(window.fbq)fbq('track','ViewContent',{content_name:'Método Leitura Viva',content_ids:['metodo-leitura-viva'],content_type:'product',value:19.90,currency:'BRL'})});
 
-// SOCIAL PROOF TOAST
-(function(){
-  const nomes=['Ana Paula','Juliana','Fernanda','Mariana','Camila','Patrícia','Renata','Beatriz','Larissa','Gabriela','Tatiane','Luciana','Débora','Vanessa','Cristiane','Priscila','Simone','Adriana','Mônica','Carolina','Letícia','Amanda','Bruna','Thais','Viviane','Raquel','Sandra','Carla','Fabiana','Jéssica'];
-  const toast=document.getElementById('spToast');
-  const spName=document.getElementById('spName');
-  let ativo=false,usados=[];
+// SCROLL DEPTH
+var t50=false,t75=false;
+window.addEventListener('scroll',function(){var p=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;if(!t50&&p>=50){t50=true;if(window.fbq)fbq('trackCustom','ScrollDepth50')}if(!t75&&p>=75){t75=true;if(window.fbq)fbq('trackCustom','ScrollDepth75')}},{passive:true});
 
-  function nome(){
-    if(usados.length>=nomes.length)usados=[];
-    const disp=nomes.filter(n=>!usados.includes(n));
-    const n=disp[Math.floor(Math.random()*disp.length)];
-    usados.push(n);return n;
-  }
-  function mostrar(){
-    if(ativo)return;
-    ativo=true;
-    spName.textContent=nome();
-    toast.classList.add('show');
-    setTimeout(esconder,4500);
-  }
-  function esconder(){
-    toast.classList.remove('show');
-    ativo=false;
-  }
-  function fecharToast(){esconder();}
-  window.fecharToast=fecharToast;
-
-  setTimeout(function(){
-    mostrar();
-    function prox(){
-      const d=(Math.random()*17000)+18000;
-      setTimeout(function(){mostrar();prox();},d);
-    }
-    prox();
-  },8000);
-})();
+// TOAST
+(function(){var nomes=['Ana Paula','Juliana','Fernanda','Mariana','Camila','Patrícia','Renata','Beatriz','Larissa','Gabriela','Tatiane','Luciana','Débora','Vanessa','Cristiane','Priscila','Simone','Adriana','Mônica','Carolina','Letícia','Amanda','Bruna','Thais','Viviane','Raquel','Sandra','Carla','Fabiana','Jéssica'];
+var toast=document.getElementById('spToast'),spName=document.getElementById('spName'),ativo=false,usados=[];
+function nome(){if(usados.length>=nomes.length)usados=[];var d=nomes.filter(n=>!usados.includes(n)),n=d[Math.floor(Math.random()*d.length)];usados.push(n);return n}
+function mostrar(){if(ativo)return;ativo=true;spName.textContent=nome();toast.classList.add('show');setTimeout(esconder,4500)}
+function esconder(){toast.classList.remove('show');ativo=false}
+window.fecharToast=esconder;
+setTimeout(function(){mostrar();function prox(){setTimeout(function(){mostrar();prox()},(Math.random()*17000)+18000)}prox()},8000)})();
 </script>
 </body>
 </html>
