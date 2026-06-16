@@ -6,7 +6,7 @@
 <title>Método Leitura Viva — Seu Filho Lendo em 21 Dias</title>
 <meta name="description" content="Kit de atividades que ensina crianças de 3 a 8 anos a ler em casa, em 15 minutos por dia.">
 
-<!-- Facebook Pixel — async, não bloqueia render -->
+<!-- Facebook Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1628892878169357');
@@ -14,22 +14,22 @@ fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1628892878169357&ev=PageView&noscript=1"/></noscript>
 
-<!-- Clarity — defer -->
+<!-- Clarity -->
 <script defer>
 (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","x00tayclpo");
 </script>
 
-<!-- UTMify — defer -->
+<!-- UTMify -->
 <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids defer></script>
 
-<!-- Fontes: só os pesos usados, display=swap -->
+<!-- Fontes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;900&family=Nunito:wght@700;800&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;900&family=Nunito:wght@700;800&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;900&family=Nunito:wght@700;800&display=swap"></noscript>
 
-<!-- Preload da imagem hero (LCP) -->
+<!-- Preload LCP -->
 <link rel="preload" as="image" href="https://github.com/aprendendofacil/metodoleituraviva/blob/main/produto.png?raw=true">
 
 <style>
@@ -41,59 +41,79 @@ body{font-family:'Nunito',sans-serif;background:var(--cr);color:var(--tx);overfl
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
-.topbar{background:var(--la);color:#fff;text-align:center;padding:10px 16px;font-family:'Baloo 2',cursive;font-weight:700;font-size:.82rem;letter-spacing:.3px}
+/* TOPBAR — urgência mais pesada */
+.topbar{background:#1a1a1a;color:#fff;text-align:center;padding:11px 16px;font-family:'Baloo 2',cursive;font-weight:700;font-size:.82rem;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.topbar-dot{width:8px;height:8px;border-radius:50%;background:#ff4444;display:inline-block;animation:blink 1.2s ease-in-out infinite;flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 .topbar b{color:var(--am)}
+.topbar-timer{background:var(--la);color:#fff;font-family:'Baloo 2',cursive;font-weight:900;font-size:.78rem;padding:2px 10px;border-radius:20px;white-space:nowrap}
 
-.hero{background:var(--cr);padding:36px 0 28px;border-bottom:3px solid var(--brd)}
-.hero-badge{display:inline-flex;align-items:center;gap:5px;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800;font-size:.74rem;padding:4px 14px;border-radius:60px;margin-bottom:16px;letter-spacing:.5px;text-transform:uppercase}
-.hero h1{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.75rem,5.5vw,2.6rem);line-height:1.15;margin-bottom:12px;color:var(--tx)}
+/* HERO NOVO */
+.hero{background:var(--cr);padding:28px 0 24px;border-bottom:3px solid var(--brd)}
+.hero-badge{display:inline-flex;align-items:center;gap:5px;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800;font-size:.72rem;padding:3px 12px;border-radius:60px;margin-bottom:12px;letter-spacing:.5px;text-transform:uppercase}
+
+/* Headline reformulada */
+.hero h1{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.65rem,5.5vw,2.5rem);line-height:1.15;margin-bottom:10px;color:var(--tx)}
 .hero h1 em{font-style:normal;color:var(--la)}
-.hero-sub{font-size:1rem;color:var(--txl);margin-bottom:24px;line-height:1.6;font-weight:700}
+.hero h1 strong{color:var(--la)}
 
-/* Hero img — tamanho fixo para evitar CLS */
-.hero-img{width:100%;max-width:420px;margin:0 auto 24px;border-radius:18px;overflow:hidden;box-shadow:0 8px 32px rgba(42,31,14,.15);border:3px solid var(--brd);aspect-ratio:4/3;background:var(--brd)}
-.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+/* Sub linha curta e direta */
+.hero-sub{font-size:.95rem;color:var(--txl);margin-bottom:6px;line-height:1.55;font-weight:700}
 
-.stats-row{display:flex;background:var(--wh);border-radius:16px;padding:14px 8px;gap:4px;margin-bottom:24px;box-shadow:0 4px 20px rgba(42,31,14,.09);border:2px solid var(--brd)}
-.stat{flex:1;text-align:center;padding:4px 6px}
-.stat-n{font-family:'Baloo 2',cursive;font-weight:900;font-size:1.5rem;color:var(--la);line-height:1}
-.stat-l{font-size:.67rem;font-weight:800;color:var(--txl);line-height:1.3;margin-top:2px}
-.stat-sep{width:1px;background:var(--brd);flex-shrink:0}
+/* Prova social inline — compacta */
+.hero-social{display:flex;align-items:center;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.hero-stars{color:var(--am2);font-size:.9rem;line-height:1}
+.hero-social-txt{font-size:.78rem;color:var(--txl);font-weight:800}
+.hero-social-sep{color:var(--brd);font-size:.8rem}
 
+/* CTA ACIMA DA DOBRA */
 .btn{display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(.95rem,3.5vw,1.15rem);padding:15px 20px;border-radius:60px;border:none;cursor:pointer;width:100%;max-width:460px;margin:0 auto;background:var(--vd);color:#fff;box-shadow:0 5px 0 var(--vd2),0 8px 24px rgba(45,203,110,.3);animation:pulse 2.3s ease-in-out infinite;white-space:nowrap;text-align:center}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:translateY(2px);box-shadow:0 2px 0 var(--vd2)}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.022)}}
-.btn-sub{text-align:center;font-size:.74rem;color:var(--txl);margin-top:8px;font-weight:700}
+.btn-sub{text-align:center;font-size:.74rem;color:var(--txl);margin-top:7px;font-weight:700}
 
-.sec{padding:36px 0}
+/* Mini trust abaixo do CTA */
+.mini-trust{display:flex;justify-content:center;gap:12px;margin-top:10px;flex-wrap:wrap}
+.mt-item{display:flex;align-items:center;gap:4px;font-size:.7rem;font-weight:800;color:var(--txl)}
+
+/* Divisor visual antes da imagem */
+.hero-divider{border:none;border-top:2px dashed var(--brd);margin:20px 0}
+
+/* Imagem — sem aspecto fixo para não distorcer */
+.hero-img{width:100%;max-width:400px;margin:0 auto 6px;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(42,31,14,.13);border:3px solid var(--brd)}
+.hero-img img{width:100%;height:auto;display:block}
+.hero-img-cap{text-align:center;font-size:.72rem;color:var(--txl);font-weight:800;margin-bottom:16px}
+
+/* Bloco de dor — logo após hero */
+.sec{padding:32px 0}
 .sec-alt{background:var(--wh)}
 .sec-warm{background:#FFF3E0}
 .eyebrow{display:inline-block;font-family:'Baloo 2',cursive;font-weight:800;font-size:.72rem;letter-spacing:1.1px;text-transform:uppercase;color:var(--la);margin-bottom:8px}
-.sec-title{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.4rem,4.5vw,1.9rem);color:var(--tx);line-height:1.2;margin-bottom:18px}
+.sec-title{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.4rem,4.5vw,1.9rem);color:var(--tx);line-height:1.2;margin-bottom:16px}
 .sec-title em{font-style:normal;color:var(--la)}
 
-.dor-list{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
-.dor-item{display:flex;align-items:flex-start;gap:12px;background:#FFF5F0;border-left:4px solid var(--la);border-radius:0 12px 12px 0;padding:13px 15px;font-size:.9rem;font-weight:700;line-height:1.5;color:var(--tx)}
-.dor-item .di{font-size:1.3rem;flex-shrink:0;margin-top:1px}
-.culpa-box{background:var(--la);color:#fff;border-radius:16px;padding:20px 18px;text-align:center;font-size:.92rem;font-weight:700;line-height:1.65}
+.dor-list{display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
+.dor-item{display:flex;align-items:flex-start;gap:12px;background:#FFF5F0;border-left:4px solid var(--la);border-radius:0 12px 12px 0;padding:12px 14px;font-size:.88rem;font-weight:700;line-height:1.5;color:var(--tx)}
+.dor-item .di{font-size:1.2rem;flex-shrink:0;margin-top:1px}
+.culpa-box{background:var(--la);color:#fff;border-radius:16px;padding:18px 16px;text-align:center;font-size:.9rem;font-weight:700;line-height:1.65}
 .culpa-box em{font-style:normal;color:var(--am)}
 
-.sol-box{background:var(--wh);border:3px solid var(--am);border-radius:20px;padding:22px 18px;box-shadow:0 4px 20px rgba(255,208,35,.15)}
-.sol-badge{display:inline-flex;align-items:center;gap:6px;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800;font-size:.95rem;padding:6px 16px;border-radius:10px;margin-bottom:14px}
-.sol-list{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:.9rem;font-weight:700;line-height:1.5}
+.sol-box{background:var(--wh);border:3px solid var(--am);border-radius:20px;padding:20px 16px;box-shadow:0 4px 20px rgba(255,208,35,.15)}
+.sol-badge{display:inline-flex;align-items:center;gap:6px;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800;font-size:.92rem;padding:5px 14px;border-radius:10px;margin-bottom:12px}
+.sol-list{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:.88rem;font-weight:700;line-height:1.5}
 .sol-list li{display:flex;align-items:flex-start;gap:8px}
 .sol-list li::before{content:'✓';color:var(--vd2);font-weight:900;flex-shrink:0;margin-top:1px}
 
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
 @media(max-width:440px){.grid2{grid-template-columns:1fr}}
-.cc{background:var(--wh);border-radius:14px;padding:16px 13px;box-shadow:0 2px 12px rgba(42,31,14,.08);border-top:4px solid var(--am)}
-.cc-icon{font-size:1.6rem;margin-bottom:7px}
-.cc-t{font-family:'Baloo 2',cursive;font-weight:800;font-size:.9rem;margin-bottom:4px;color:var(--tx)}
-.cc-d{font-size:.8rem;color:var(--txl);line-height:1.4}
+.cc{background:var(--wh);border-radius:12px;padding:14px 12px;box-shadow:0 2px 12px rgba(42,31,14,.08);border-top:4px solid var(--am)}
+.cc-icon{font-size:1.5rem;margin-bottom:6px}
+.cc-t{font-family:'Baloo 2',cursive;font-weight:800;font-size:.86rem;margin-bottom:3px;color:var(--tx)}
+.cc-d{font-size:.76rem;color:var(--txl);line-height:1.4}
 
-/* CARROSSEL — CSS puro, sem JS de scroll */
-.sec-reviews{background:var(--cr);padding:36px 0;overflow:hidden}
+/* CARROSSEL */
+.sec-reviews{background:var(--cr);padding:32px 0;overflow:hidden}
 .carrossel-outer{width:100vw;margin-left:calc(-50vw + 50%);overflow:hidden;position:relative}
 .carrossel-outer::before,.carrossel-outer::after{content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none}
 .carrossel-outer::before{left:0;background:linear-gradient(to right,var(--cr),transparent)}
@@ -116,11 +136,11 @@ img{max-width:100%;display:block}
 .dep-text{font-size:.87rem;line-height:1.55;color:var(--tx)}
 .dep-react{margin-top:8px;font-size:.75rem;color:#888;display:flex;gap:10px}
 
-.urgencia{background:var(--la);color:#fff;padding:36px 0;text-align:center}
+.urgencia{background:var(--la);color:#fff;padding:32px 0;text-align:center}
 .u-title{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.3rem,4.5vw,1.9rem);color:var(--am);margin-bottom:6px;line-height:1.2}
-.u-sub{font-size:.9rem;opacity:.9;margin-bottom:22px;line-height:1.5}
+.u-sub{font-size:.9rem;opacity:.9;margin-bottom:20px;line-height:1.5}
 .u-sub b{color:var(--am)}
-.countdown{display:flex;justify-content:center;gap:10px;margin-bottom:22px}
+.countdown{display:flex;justify-content:center;gap:10px;margin-bottom:20px}
 .cd{background:rgba(0,0,0,.15);border:2px solid rgba(255,208,35,.5);border-radius:10px;padding:10px 14px;text-align:center;min-width:58px}
 .cd-n{font-family:'Baloo 2',cursive;font-weight:900;font-size:1.8rem;color:var(--am);line-height:1}
 .cd-l{font-size:.6rem;color:rgba(255,255,255,.7);font-weight:700;text-transform:uppercase;letter-spacing:.7px}
@@ -129,6 +149,7 @@ img{max-width:100%;display:block}
 @keyframes fillBar{from{width:0}}
 .est-lbl{font-size:.74rem;font-weight:800;color:var(--am);opacity:.9}
 
+/* OFERTA compacta */
 .oferta-card{background:var(--wh);border-radius:18px;padding:18px 14px 20px;box-shadow:0 8px 36px rgba(42,31,14,.12);border:3px solid var(--am);position:relative;margin-top:20px}
 .of-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--la);color:#fff;font-family:'Baloo 2',cursive;font-weight:900;font-size:.7rem;padding:3px 16px;border-radius:60px;white-space:nowrap;letter-spacing:.3px}
 .of-title{font-family:'Baloo 2',cursive;font-weight:900;font-size:1.05rem;margin-bottom:2px;color:var(--tx)}
@@ -152,23 +173,23 @@ img{max-width:100%;display:block}
 .bon-v{font-size:.7rem;color:#bbb}
 .bon-v b{color:var(--vd2);font-size:.75rem}
 
-.gar-box{background:var(--wh);border:3px dashed var(--am);border-radius:20px;padding:24px 18px;text-align:center}
-.gar-icon{font-size:3rem;margin-bottom:10px}
-.gar-t{font-family:'Baloo 2',cursive;font-weight:900;font-size:1.4rem;color:var(--la);margin-bottom:10px}
-.gar-p{font-size:.9rem;color:var(--tx);line-height:1.7}
+.gar-box{background:var(--wh);border:3px dashed var(--am);border-radius:20px;padding:22px 16px;text-align:center}
+.gar-icon{font-size:2.8rem;margin-bottom:8px}
+.gar-t{font-family:'Baloo 2',cursive;font-weight:900;font-size:1.3rem;color:var(--la);margin-bottom:8px}
+.gar-p{font-size:.88rem;color:var(--tx);line-height:1.7}
 
 .faq-list{display:flex;flex-direction:column;gap:8px;margin-top:14px}
 .faq-item{background:var(--wh);border-radius:13px;overflow:hidden;box-shadow:0 2px 10px rgba(42,31,14,.06)}
-.faq-q{width:100%;background:none;border:none;text-align:left;padding:15px 16px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.88rem;color:var(--tx);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;line-height:1.4}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:14px 16px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.86rem;color:var(--tx);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;line-height:1.4}
 .faq-arr{color:var(--la);font-size:.9rem;transition:transform .25s;flex-shrink:0}
 .faq-item.open .faq-arr{transform:rotate(180deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:.85rem;color:var(--txl);line-height:1.6}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:.84rem;color:var(--txl);line-height:1.6}
 .faq-item.open .faq-a{max-height:200px}
 .faq-ai{padding:0 16px 14px}
 
-.ftrcta{background:var(--la);padding:44px 0 32px;text-align:center;color:#fff}
+.ftrcta{background:var(--la);padding:40px 0 28px;text-align:center;color:#fff}
 .ftrcta h2{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.4rem,4.5vw,2rem);color:var(--am);margin-bottom:10px;line-height:1.2}
-.ftrcta p{font-size:.9rem;opacity:.88;margin-bottom:24px;line-height:1.55}
+.ftrcta p{font-size:.88rem;opacity:.88;margin-bottom:22px;line-height:1.55}
 .ftrcta .btn-sub{color:rgba(255,255,255,.65)}
 
 footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;padding:18px;font-size:.72rem;line-height:1.8}
@@ -177,10 +198,10 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
 .sticky a{color:#fff;font-family:'Baloo 2',cursive;font-weight:900;font-size:.95rem;display:flex;align-items:center;gap:7px}
 @media(max-width:640px){.sticky{display:flex};body{padding-bottom:56px}}
 
-.trust{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:14px}
-.tb{display:flex;align-items:center;gap:4px;font-size:.74rem;font-weight:700;color:var(--txl)}
+.trust{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:14px}
+.tb{display:flex;align-items:center;gap:4px;font-size:.72rem;font-weight:700;color:var(--txl)}
 
-/* TOAST compacto */
+/* TOAST */
 .sp-toast{position:fixed;bottom:70px;left:12px;width:220px;background:#1a7a3c;color:#fff;border-radius:12px;padding:9px 10px;display:flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.22);z-index:1000;opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
 .sp-toast.show{opacity:1;transform:translateY(0);pointer-events:auto}
 .sp-icon{width:26px;height:26px;border-radius:50%;background:var(--vd);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.75rem;font-weight:900}
@@ -202,49 +223,78 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   <button class="sp-close" onclick="fecharToast()">✕</button>
 </div>
 
-<div class="topbar">Promoção ativa: <b>55% OFF</b> somente para quem acessou essa página hoje</div>
+<!-- TOPBAR com urgência pesada -->
+<div class="topbar">
+  <span class="topbar-dot"></span>
+  <span>Oferta ativa só hoje — <b>55% OFF</b></span>
+  <span class="topbar-timer" id="topTimer">carregando...</span>
+</div>
 
+<!-- HERO REFORMULADO -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero-badge">Método Leitura Viva</div>
-    <h1>Não Deixe Seu Filho Ficar Para Trás:<br><em>Destrave a Leitura em 21 Dias</em></h1>
-    <p class="hero-sub">15 minutos por dia. Sem precisar ser professora. <strong>Resultado garantido ou seu dinheiro de volta.</strong></p>
-    <!-- LCP: fetchpriority=high, sem lazy -->
+    <div class="hero-badge">Kit imprimível · PDF imediato</div>
+
+    <h1>Seu filho tem<br><em>dificuldade pra ler?</em></h1>
+
+    <p class="hero-sub">Em <strong>21 dias</strong>, qualquer mãe consegue mudar isso — sem ser professora, sem cursos caros, em <strong>15 minutos por dia.</strong></p>
+
+    <!-- PROVA SOCIAL INLINE -->
+    <div class="hero-social">
+      <span class="hero-stars">★★★★★</span>
+      <span class="hero-social-txt">+2.400 famílias</span>
+      <span class="hero-social-sep">·</span>
+      <span class="hero-social-txt">avaliação 4,9</span>
+      <span class="hero-social-sep">·</span>
+      <span class="hero-social-txt">resultado em 21 dias</span>
+    </div>
+
+    <!-- CTA ACIMA DA DOBRA -->
+    <a href="#oferta" class="btn">✅ Quero meu filho lendo agora</a>
+    <div class="btn-sub">Acesso imediato · Compra 100% segura · Garantia 7 dias</div>
+
+    <div class="mini-trust">
+      <div class="mt-item">🔒 Pagamento seguro</div>
+      <div class="mt-item">📲 Recebe na hora</div>
+      <div class="mt-item">🖨️ Imprime em casa</div>
+    </div>
+
+    <hr class="hero-divider">
+
+    <!-- IMAGEM DO PRODUTO -->
     <div class="hero-img">
       <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/produto.png?raw=true"
            alt="Método Leitura Viva — Kit completo de atividades"
-           width="420" height="315"
+           width="400" height="300"
            fetchpriority="high">
     </div>
-    <div class="stats-row">
-      <div class="stat"><div class="stat-n">+2.400</div><div class="stat-l">famílias atendidas</div></div>
-      <div class="stat-sep"></div>
-      <div class="stat"><div class="stat-n">4,9 ★</div><div class="stat-l">avaliação média</div></div>
-      <div class="stat-sep"></div>
-      <div class="stat"><div class="stat-n">21 dias</div><div class="stat-l">para 1ª leitura</div></div>
-    </div>
-    <a href="#oferta" class="btn">Quero meu filho lendo agora</a>
-    <div class="btn-sub">Compra 100% segura · Acesso imediato</div>
+    <p class="hero-img-cap">📦 Kit completo com +200 atividades em PDF</p>
+
+    <!-- CTA REPETIDO APÓS IMAGEM -->
+    <a href="#oferta" class="btn">Garantir meu acesso por R$ 19,90</a>
+    <div class="btn-sub">De R$ 57,00 por apenas R$ 19,90 hoje</div>
   </div>
 </section>
 
+<!-- DOR -->
 <section class="sec sec-alt">
   <div class="wrap">
     <span class="eyebrow">Isso te soa familiar?</span>
-    <h2 class="sec-title">Seu filho ainda <em>não lê?</em></h2>
+    <h2 class="sec-title">Por que seu filho <em>ainda não lê?</em></h2>
     <div class="dor-list">
-      <div class="dor-item"><span class="di">😔</span>Ele trava na leitura enquanto os colegas já lêem com facilidade</div>
+      <div class="dor-item"><span class="di">😔</span>Ele trava nas letras enquanto os colegas já lêem com facilidade</div>
       <div class="dor-item"><span class="di">😰</span>A lição de casa vira batalha e choro todo dia</div>
-      <div class="dor-item"><span class="di">😟</span>Você tenta ajudar mas não sabe por onde começar</div>
+      <div class="dor-item"><span class="di">😟</span>Você quer ajudar mas não sabe por onde começar</div>
       <div class="dor-item"><span class="di">⏰</span>Cada semana que passa é tempo que não volta</div>
     </div>
     <div class="culpa-box">
       <em>Não é culpa sua não saber como ajudar.</em><br>
-      Mas agora você tem um método simples, lúdico e testado por mais de 2.400 famílias. <em>Você pode mudar isso hoje.</em>
+      Você nunca recebeu um método simples e testado. <em>Mas isso muda agora.</em>
     </div>
   </div>
 </section>
 
+<!-- SOLUÇÃO -->
 <section class="sec">
   <div class="wrap">
     <span class="eyebrow">A solução</span>
@@ -262,6 +312,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
+<!-- O QUE TEM NO KIT -->
 <section class="sec sec-alt">
   <div class="wrap">
     <span class="eyebrow">O que está no kit</span>
@@ -277,15 +328,14 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
-<!-- CARROSSEL — imagens com lazy load -->
+<!-- CARROSSEL DE REVIEWS -->
 <section class="sec-reviews">
   <div class="wrap">
     <span class="eyebrow">Resultados reais</span>
     <h2 class="sec-title" style="margin-bottom:20px">Veja o que as mães estão <em>compartilhando</em></h2>
   </div>
   <div class="carrossel-outer">
-    <div class="carrossel-track" id="carTrack">
-      <!-- 8 originais: primeiras 4 eager, resto lazy -->
+    <div class="carrossel-track">
       <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed1.jpeg?raw=true" alt="" width="135" height="180">
       <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed3.png?raw=true" alt="" width="135" height="180">
       <img src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed5.png?raw=true" alt="" width="135" height="180">
@@ -294,7 +344,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
       <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed11.png?raw=true" alt="" width="135" height="180">
       <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed13.jpeg?raw=true" alt="" width="135" height="180">
       <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed21.jpeg?raw=true" alt="" width="135" height="180">
-      <!-- 7 duplicatas para loop infinito -->
+      <!-- duplicatas loop -->
       <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed1.jpeg?raw=true" alt="" width="135" height="180">
       <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed3.png?raw=true" alt="" width="135" height="180">
       <img loading="lazy" src="https://github.com/aprendendofacil/heroiasdabibliacenter/blob/main/feed5.png?raw=true" alt="" width="135" height="180">
@@ -306,6 +356,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
+<!-- DEPOIMENTOS FACEBOOK -->
 <section class="sec sec-warm">
   <div class="wrap">
     <span class="eyebrow">O que as mães dizem</span>
@@ -363,10 +414,11 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
+<!-- URGÊNCIA -->
 <section class="urgencia">
   <div class="wrap">
-    <h2 class="u-title">Oferta por tempo limitado</h2>
-    <p class="u-sub">O desconto de <b>55% OFF</b> some quando o timer acabar</p>
+    <h2 class="u-title">⚠️ Oferta por tempo limitado</h2>
+    <p class="u-sub">O desconto de <b>55% OFF</b> some quando o timer zerar</p>
     <div class="countdown">
       <div class="cd"><div class="cd-n" id="cdh">00</div><div class="cd-l">Horas</div></div>
       <div class="cd"><div class="cd-n" id="cdm">00</div><div class="cd-l">Min</div></div>
@@ -379,6 +431,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
+<!-- OFERTA -->
 <section class="sec" id="oferta">
   <div class="wrap">
     <span class="eyebrow">Sua oferta</span>
@@ -402,9 +455,10 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
         <span>Valor total do kit</span>
         <span><span class="val-de">R$ 372,00</span> &nbsp;<span class="val-por">R$ 19,90</span></span>
       </div>
-      <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn">Quero o Super Combo</a>
+      <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn">Quero o Super Combo agora</a>
       <div class="btn-sub">Pix · Cartão · Boleto &nbsp;|&nbsp; Acesso imediato</div>
     </div>
+
     <div style="margin-top:28px">
       <h3 style="font-family:'Baloo 2',cursive;font-weight:900;font-size:1.1rem;text-align:center;margin-bottom:12px;color:var(--tx)">Os <span style="color:var(--la)">4 bônus</span> que você leva grátis</h3>
       <div class="bonus-grid">
@@ -415,14 +469,15 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
       </div>
     </div>
     <div class="trust">
-      <div class="tb">Compra segura</div>
-      <div class="tb">Acesso imediato</div>
-      <div class="tb">Acesso vitalício</div>
-      <div class="tb">Garantia 7 dias</div>
+      <div class="tb">🔒 Compra segura</div>
+      <div class="tb">📲 Acesso imediato</div>
+      <div class="tb">♾️ Acesso vitalício</div>
+      <div class="tb">🛡️ Garantia 7 dias</div>
     </div>
   </div>
 </section>
 
+<!-- GARANTIA -->
 <section class="sec sec-alt">
   <div class="wrap">
     <div class="gar-box">
@@ -433,6 +488,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   </div>
 </section>
 
+<!-- FAQ -->
 <section class="sec">
   <div class="wrap">
     <span class="eyebrow">Dúvidas rápidas</span>
@@ -454,10 +510,15 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
         <button class="faq-q" onclick="tFaq(this)">Preciso ter experiência de professora? <span class="faq-arr">▼</span></button>
         <div class="faq-a"><div class="faq-ai">Zero experiência necessária. O Guia da Mãe explica tudo passo a passo com imagens. Qualquer mãe ou pai consegue aplicar.</div></div>
       </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tFaq(this)">Funciona com criança que tem TDAH? <span class="faq-arr">▼</span></button>
+        <div class="faq-a"><div class="faq-ai">Sim. As atividades são curtas, lúdicas e variadas — feitas justamente para crianças com dificuldade de foco. Várias mães de crianças com TDAH e autismo relataram resultados surpreendentes.</div></div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- CTA FINAL -->
 <section class="ftrcta">
   <div class="wrap">
     <h2>Não deixe seu filho perder<br>essa janela de aprendizado</h2>
@@ -474,29 +535,51 @@ footer{background:var(--tx);color:rgba(255,255,255,.45);text-align:center;paddin
   <p style="margin-top:6px"><a href="#" style="color:rgba(255,255,255,.35);text-decoration:underline">Política de Privacidade</a> · <a href="#" style="color:rgba(255,255,255,.35);text-decoration:underline">Termos de Uso</a></p>
 </footer>
 
-<div class="sticky"><a href="#oferta">Garantir meu acesso agora</a></div>
+<div class="sticky"><a href="#oferta">⚡ Garantir meu acesso — R$ 19,90</a></div>
 
 <script>
 function tFaq(btn){var item=btn.closest('.faq-item'),was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!was)item.classList.add('open')}
 
-// COUNTDOWN
-(function(){function getExp(){var s=sessionStorage.getItem('lv_exp');if(s)return parseInt(s);var e=Date.now()+(23*3600+59*60+59)*1000;sessionStorage.setItem('lv_exp',e);return e}var exp=getExp();function tick(){var d=Math.max(0,Math.floor((exp-Date.now())/1000));document.getElementById('cdh').textContent=String(Math.floor(d/3600)).padStart(2,'0');document.getElementById('cdm').textContent=String(Math.floor((d%3600)/60)).padStart(2,'0');document.getElementById('cds').textContent=String(d%60).padStart(2,'0')}tick();setInterval(tick,1000)})();
+// COUNTDOWN — compartilhado entre topbar e seção urgência
+(function(){
+  function getExp(){var s=sessionStorage.getItem('lv_exp');if(s)return parseInt(s);var e=Date.now()+(23*3600+59*60+59)*1000;sessionStorage.setItem('lv_exp',e);return e}
+  var exp=getExp();
+  function tick(){
+    var d=Math.max(0,Math.floor((exp-Date.now())/1000));
+    var h=String(Math.floor(d/3600)).padStart(2,'0');
+    var m=String(Math.floor((d%3600)/60)).padStart(2,'0');
+    var s=String(d%60).padStart(2,'0');
+    document.getElementById('cdh').textContent=h;
+    document.getElementById('cdm').textContent=m;
+    document.getElementById('cds').textContent=s;
+    document.getElementById('topTimer').textContent=h+':'+m+':'+s;
+  }
+  tick();setInterval(tick,1000);
+})();
 
 // PIXEL ViewContent
-window.addEventListener('load',function(){if(window.fbq)fbq('track','ViewContent',{content_name:'Método Leitura Viva',content_ids:['metodo-leitura-viva'],content_type:'product',value:19.90,currency:'BRL'})});
+window.addEventListener('load',function(){
+  if(window.fbq)fbq('track','ViewContent',{content_name:'Método Leitura Viva',content_ids:['metodo-leitura-viva'],content_type:'product',value:19.90,currency:'BRL'});
+});
 
 // SCROLL DEPTH
 var t50=false,t75=false;
-window.addEventListener('scroll',function(){var p=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;if(!t50&&p>=50){t50=true;if(window.fbq)fbq('trackCustom','ScrollDepth50')}if(!t75&&p>=75){t75=true;if(window.fbq)fbq('trackCustom','ScrollDepth75')}},{passive:true});
+window.addEventListener('scroll',function(){
+  var p=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
+  if(!t50&&p>=50){t50=true;if(window.fbq)fbq('trackCustom','ScrollDepth50')}
+  if(!t75&&p>=75){t75=true;if(window.fbq)fbq('trackCustom','ScrollDepth75')}
+},{passive:true});
 
 // TOAST
-(function(){var nomes=['Ana Paula','Juliana','Fernanda','Mariana','Camila','Patrícia','Renata','Beatriz','Larissa','Gabriela','Tatiane','Luciana','Débora','Vanessa','Cristiane','Priscila','Simone','Adriana','Mônica','Carolina','Letícia','Amanda','Bruna','Thais','Viviane','Raquel','Sandra','Carla','Fabiana','Jéssica'];
-var toast=document.getElementById('spToast'),spName=document.getElementById('spName'),ativo=false,usados=[];
-function nome(){if(usados.length>=nomes.length)usados=[];var d=nomes.filter(n=>!usados.includes(n)),n=d[Math.floor(Math.random()*d.length)];usados.push(n);return n}
-function mostrar(){if(ativo)return;ativo=true;spName.textContent=nome();toast.classList.add('show');setTimeout(esconder,4500)}
-function esconder(){toast.classList.remove('show');ativo=false}
-window.fecharToast=esconder;
-setTimeout(function(){mostrar();function prox(){setTimeout(function(){mostrar();prox()},(Math.random()*17000)+18000)}prox()},8000)})();
+(function(){
+  var nomes=['Ana Paula','Juliana','Fernanda','Mariana','Camila','Patrícia','Renata','Beatriz','Larissa','Gabriela','Tatiane','Luciana','Débora','Vanessa','Cristiane','Priscila','Simone','Adriana','Mônica','Carolina','Letícia','Amanda','Bruna','Thais','Viviane','Raquel','Sandra','Carla','Fabiana','Jéssica'];
+  var toast=document.getElementById('spToast'),spName=document.getElementById('spName'),ativo=false,usados=[];
+  function nome(){if(usados.length>=nomes.length)usados=[];var d=nomes.filter(n=>!usados.includes(n)),n=d[Math.floor(Math.random()*d.length)];usados.push(n);return n}
+  function mostrar(){if(ativo)return;ativo=true;spName.textContent=nome();toast.classList.add('show');setTimeout(esconder,4500)}
+  function esconder(){toast.classList.remove('show');ativo=false}
+  window.fecharToast=esconder;
+  setTimeout(function(){mostrar();function prox(){setTimeout(function(){mostrar();prox()},(Math.random()*17000)+18000)}prox()},8000);
+})();
 </script>
 </body>
 </html>
