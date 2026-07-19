@@ -2,13 +2,11 @@
 <html lang="pt-BR">
 <head>
 <script>
-  window.pixelId = "6a21953d2f04b2df519c3766";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1628892878169357');
+fbq('track','PageView');
 </script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1628892878169357&ev=PageView&noscript=1"/></noscript>
 <script defer>
 (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","x00tayclpo");
 </script>
@@ -16,8 +14,8 @@
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Método Leitura Viva: Seu Filho Lendo em 21 Dias</title>
-<meta name="description" content="Kit de atividades que ensina crianças de 3 a 8 anos a ler em casa, em 15 minutos por dia.">
+<title>Método Leitura Viva: Programa de Alfabetização em Casa</title>
+<meta name="description" content="Programa organizado em etapas para ajudar crianças de 3 a 8 anos a reconhecer letras, formar sílabas, construir palavras e avançar nas primeiras leituras, com a orientação do Professor Corujão.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +23,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;900&family=Nunito:wght@700;800&display=swap"></noscript>
 
 <style>
-:root{--la:#FF6B35;--la2:#E55520;--am:#FFD023;--am2:#F5B800;--vd:#2DCB6E;--vd2:#1FA855;--tx:#2A1F0E;--txl:#5C4A2A;--cr:#FFF8EC;--wh:#fff;--brd:#F0E8D8}
+:root{--la:#FF6B35;--la2:#E55520;--am:#FFD023;--am2:#F5B800;--vd:#2DCB6E;--vd2:#1FA855;--az:#1E3A5F;--tx:#2A1F0E;--txl:#5C4A2A;--cr:#FFF8EC;--wh:#fff;--brd:#F0E8D8}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Nunito',sans-serif;background:var(--cr);color:var(--tx);overflow-x:hidden;font-size:16px;line-height:1.7}
@@ -33,128 +31,170 @@ body{font-family:'Nunito',sans-serif;background:var(--cr);color:var(--tx);overfl
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
-.btn{display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',cursive;font-weight:900;font-size:1.05rem;padding:16px 20px;border-radius:60px;border:none;cursor:pointer;width:100%;max-width:440px;margin:0 auto;background:var(--vd);color:#fff;box-shadow:0 5px 0 var(--vd2),0 8px 24px rgba(45,203,110,.3);animation:pulse 2.3s ease-in-out infinite}
+.btn{display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',cursive;font-weight:900;font-size:1.02rem;padding:16px 20px;border-radius:60px;border:none;cursor:pointer;width:100%;max-width:440px;margin:0 auto;background:var(--vd);color:#fff;box-shadow:0 5px 0 var(--vd2),0 8px 24px rgba(45,203,110,.3)}
 .btn:active{transform:translateY(2px);box-shadow:0 2px 0 var(--vd2)}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
 .btn-sub{text-align:center;font-size:.74rem;color:var(--txl);margin-top:9px;font-weight:700}
 
 .sec{padding:40px 0}
 .sec-clara{background:var(--cr)}
 .sec-branca{background:var(--wh)}
-.sec-warm{background:#FFF3E0}
 .sec-escura{background:var(--la);color:#fff}
+.sec-azul{background:var(--az);color:#fff}
 
-.bloco-titulo{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.4rem,5vw,1.9rem);line-height:1.2;margin-bottom:16px;color:var(--tx)}
+.bloco-titulo{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.35rem,5vw,1.85rem);line-height:1.25;margin-bottom:16px;color:var(--tx)}
 .bloco-titulo em{font-style:normal;color:var(--la)}
 .sec-escura .bloco-titulo{color:var(--am)}
 .sec-escura .bloco-titulo em{color:var(--am)}
-.bloco-p{font-size:.95rem;color:var(--txl);line-height:1.8;font-weight:600;margin-bottom:16px}
+.sec-azul .bloco-titulo{color:var(--am)}
+.sec-azul .bloco-titulo em{color:#fff}
+.bloco-p{font-size:.94rem;color:var(--txl);line-height:1.8;font-weight:600;margin-bottom:14px}
 .bloco-p strong{color:var(--tx);font-weight:800}
-.sec-escura .bloco-p{color:rgba(255,255,255,.9)}
-.sec-escura .bloco-p strong{color:#fff}
-.eyebrow{display:inline-block;font-family:'Baloo 2',cursive;font-weight:800;font-size:.72rem;letter-spacing:1.1px;text-transform:uppercase;color:var(--la);margin-bottom:8px}
+.sec-escura .bloco-p,.sec-azul .bloco-p{color:rgba(255,255,255,.9)}
+.sec-escura .bloco-p strong,.sec-azul .bloco-p strong{color:#fff}
+.eyebrow{display:inline-block;font-family:'Baloo 2',cursive;font-weight:800;font-size:.7rem;letter-spacing:1.1px;text-transform:uppercase;color:var(--la);margin-bottom:8px}
 
-/* BLOCO 1 — HEADLINE SOBRE IMAGEM DE FUNDO */
-.hero{position:relative;min-height:80vh;display:flex;flex-direction:column;background-image:url('https://github.com/aprendendofacil/metodoleituraviva/blob/main/3e9fd431-bbc8-46b6-b0df-43f8c1ac8397.png?raw=true');background-size:cover;background-position:top center;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(42,31,14,.85) 0%,rgba(42,31,14,.45) 32%,rgba(42,31,14,.05) 55%,rgba(42,31,14,.5) 100%)}
-.hero-conteudo{position:relative;z-index:2;padding:44px 24px 0;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:5px;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800;font-size:.72rem;padding:4px 14px;border-radius:60px;margin-bottom:14px;letter-spacing:.5px;text-transform:uppercase}
-.hero-h1{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.6rem,6vw,2.2rem);line-height:1.2;color:#fff;margin-bottom:12px;max-width:480px;margin-left:auto;margin-right:auto}
+/* BLOCO 1 — HERO */
+.hero{position:relative;min-height:78vh;display:flex;flex-direction:column;background-image:url('https://raw.githubusercontent.com/aprendendofacil/metodoleituraviva/main/hero-mae-filho.jpg');background-size:cover;background-position:top center;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(42,31,14,.88) 0%,rgba(42,31,14,.5) 34%,rgba(42,31,14,.08) 55%,rgba(42,31,14,.55) 100%)}
+.hero-conteudo{position:relative;z-index:2;padding:40px 22px 0;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:5px;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800;font-size:.68rem;padding:4px 14px;border-radius:60px;margin-bottom:14px;letter-spacing:.3px;text-transform:uppercase}
+.hero-h1{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.5rem,6vw,2.1rem);line-height:1.25;color:#fff;margin-bottom:12px;max-width:480px;margin-left:auto;margin-right:auto}
 .hero-h1 em{font-style:normal;color:var(--am)}
-.hero-sub{font-size:.98rem;color:rgba(255,255,255,.92);font-weight:700;line-height:1.65;max-width:440px;margin:0 auto}
-.hero-social{display:flex;align-items:center;justify-content:center;gap:8px;margin:14px 0 20px;flex-wrap:wrap}
-.hero-stars{color:var(--am);font-size:.9rem}
-.hero-social-txt{font-size:.76rem;color:rgba(255,255,255,.85);font-weight:800}
-.hero-social-sep{color:rgba(255,255,255,.4)}
+.hero-sub{font-size:.94rem;color:rgba(255,255,255,.92);font-weight:700;line-height:1.6;max-width:440px;margin:0 auto}
+.hero-tags{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:16px 0}
+.hero-tag{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.7rem;font-weight:800;padding:5px 12px;border-radius:60px}
+.hero-corujao-mini{position:absolute;right:14px;bottom:14px;width:78px;z-index:3;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+/* Recorte do Corujão apontando, com fundo transparente — extrair da folha de referência */
 
-/* BLOCO 2 — DEPOIMENTOS */
+/* BLOCO — INTRO DO CORUJÃO (logo após o hero) */
+.corujao-intro{display:flex;align-items:center;gap:14px;background:var(--wh);border-radius:18px;padding:16px;margin:-30px 20px 0;position:relative;z-index:4;box-shadow:0 8px 28px rgba(42,31,14,.14);max-width:600px;margin-left:auto;margin-right:auto}
+.corujao-intro img{width:64px;height:64px;border-radius:14px;object-fit:cover;flex-shrink:0;background:var(--brd)}
+.corujao-intro-txt{font-size:.83rem;color:var(--txl);font-weight:600;line-height:1.55}
+.corujao-intro-txt strong{color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800}
+
+/* BLOCO 3 — PROVA SOCIAL */
+.prova-numero{text-align:center;padding:8px 0}
+.pn-num{font-family:'Baloo 2',cursive;font-size:2.5rem;font-weight:900;color:var(--la)}
+.pn-txt{font-size:.94rem;color:var(--txl);font-weight:700;max-width:380px;margin:6px auto 0;line-height:1.6}
+
+/* DEPOIMENTOS */
 .depo-grid{display:flex;flex-direction:column;gap:44px;margin-top:24px}
 .depo-card{position:relative}
 .depo-foto-grande{width:100%;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:0 6px 20px rgba(42,31,14,.15);background:var(--brd)}
 .depo-foto-grande img{width:100%;height:100%;object-fit:cover;display:block}
 .depo-popup{position:relative;z-index:2;background:var(--la);border-radius:16px;padding:18px 18px 16px;margin:-36px 14px 0;box-shadow:0 8px 24px rgba(0,0,0,.18)}
 .depo-stars{color:var(--am);font-size:.85rem;margin-bottom:8px;letter-spacing:1px}
-.depo-txt{font-size:.88rem;font-weight:600;color:#fff;line-height:1.65;margin-bottom:10px;text-align:left}
-.depo-autor{font-family:'Baloo 2',cursive;font-size:.85rem;font-weight:800;color:var(--am)}
+.depo-txt{font-size:.87rem;font-weight:600;color:#fff;line-height:1.65;margin-bottom:10px;text-align:left}
+.depo-autor{font-family:'Baloo 2',cursive;font-size:.84rem;font-weight:800;color:var(--am)}
 
-/* BLOCO 3 — NÚMERO PROVA SOCIAL */
-.prova-numero{text-align:center;padding:8px 0}
-.pn-num{font-family:'Baloo 2',cursive;font-size:2.6rem;font-weight:900;color:var(--la)}
-.pn-txt{font-size:.95rem;color:var(--txl);font-weight:700;max-width:380px;margin:6px auto 0;line-height:1.6}
-
-/* BLOCO 4 — IDENTIFICAÇÃO */
+/* IDENTIFICAÇÃO */
 .id-lista{display:flex;flex-direction:column;gap:0;margin:20px 0}
 .id-item{padding:16px 0;border-bottom:1px solid var(--brd)}
 .id-item:last-child{border-bottom:none}
-.id-titulo{font-weight:800;font-size:.94rem;color:var(--tx);margin-bottom:5px;display:flex;gap:10px}
+.id-titulo{font-weight:800;font-size:.93rem;color:var(--tx);margin-bottom:5px;display:flex;gap:10px}
 .id-num{color:var(--la);flex-shrink:0}
-.id-sub{font-size:.85rem;color:var(--txl);line-height:1.65;padding-left:24px;font-weight:600}
+.id-sub{font-size:.84rem;color:var(--txl);line-height:1.6;padding-left:24px;font-weight:600}
 
-/* BLOCO 5 — MECANISMO */
-.mec-steps{display:flex;flex-direction:column;gap:18px;margin:24px 0}
-.mec-step{display:flex;align-items:flex-start;gap:14px}
-.mec-num{width:34px;height:34px;border-radius:50%;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
-.mec-txt strong{font-family:'Baloo 2',cursive;font-size:.95rem;color:#fff;display:block;line-height:1.35;margin-bottom:4px;font-weight:800}
-.mec-txt span{font-size:.85rem;color:rgba(255,255,255,.85);line-height:1.6;font-weight:600}
+/* NÃO É APENAS UM CADERNO — comparativo */
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.comp-col{border-radius:16px;padding:16px 13px}
+.comp-antes{background:#FFF0EC;border:1.5px solid #FFD2C0}
+.comp-depois{background:#F0FAF3;border:1.5px solid var(--vd)}
+.comp-label{font-family:'Baloo 2',cursive;font-weight:900;font-size:.72rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;display:block}
+.comp-antes .comp-label{color:var(--la2)}
+.comp-depois .comp-label{color:var(--vd2)}
+.comp-item{font-size:.78rem;font-weight:700;line-height:1.5;margin-bottom:8px;color:var(--tx)}
 
-/* BLOCO 7 — SEGMENTAÇÃO */
+/* JORNADA VIVA */
+.jornada-fase{display:flex;flex-direction:column;gap:10px;background:rgba(255,255,255,.08);border-radius:16px;padding:16px;margin-bottom:14px}
+.jornada-top{display:flex;align-items:center;gap:12px}
+.jornada-letra{width:38px;height:38px;border-radius:50%;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.jornada-titulo{font-family:'Baloo 2',cursive;font-weight:800;font-size:.95rem;color:#fff}
+.jornada-obj{font-size:.83rem;color:rgba(255,255,255,.85);font-weight:600;line-height:1.55;padding-left:50px}
+.jornada-img{width:100%;border-radius:12px;margin-top:6px;background:rgba(255,255,255,.12);aspect-ratio:16/9;object-fit:cover}
+/* Cada .jornada-img deve ser substituída por uma imagem real da atividade correspondente */
+
+/* PRODUTO POR DENTRO — galeria */
+.galeria-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.galeria-item{border-radius:14px;overflow:hidden;background:var(--brd);aspect-ratio:1/1;position:relative}
+.galeria-item img{width:100%;height:100%;object-fit:cover;display:block}
+.galeria-label{position:absolute;bottom:0;left:0;right:0;background:rgba(42,31,14,.72);color:#fff;font-size:.7rem;font-weight:800;padding:6px 8px;text-align:center}
+
+/* COMO APLICAR EM 15 MINUTOS */
+.rotina-steps{display:flex;flex-direction:column;gap:14px;margin:20px 0}
+.rotina-step{display:flex;gap:14px;align-items:flex-start}
+.rotina-num{width:30px;height:30px;border-radius:50%;background:var(--vd);color:#fff;font-family:'Baloo 2',cursive;font-weight:900;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rotina-txt strong{font-family:'Baloo 2',cursive;font-size:.9rem;color:var(--tx);display:block;margin-bottom:2px}
+.rotina-txt span{font-size:.84rem;color:var(--txl);line-height:1.55;font-weight:600}
+.rotina-destaque{background:var(--wh);border-left:4px solid var(--vd);border-radius:0 12px 12px 0;padding:14px 16px;margin-top:16px;font-size:.85rem;font-weight:700;color:var(--tx);line-height:1.6}
+
+/* GUIA DA MÃE */
+.guia-box{display:flex;flex-direction:column;gap:16px;background:var(--wh);border:3px solid var(--am);border-radius:20px;padding:20px 18px;margin-top:18px}
+.guia-img{width:120px;margin:0 auto;border-radius:12px;box-shadow:0 6px 20px rgba(42,31,14,.15)}
+.guia-lista{display:flex;flex-direction:column;gap:8px}
+.guia-item{font-size:.85rem;font-weight:700;color:var(--tx);padding-left:24px;position:relative}
+.guia-item::before{content:'✓';position:absolute;left:0;color:var(--vd2);font-weight:900}
+
+/* SEGMENTAÇÃO */
 .seg-lista{display:flex;flex-direction:column;gap:10px;margin:18px 0 24px}
-.seg-item{font-size:.92rem;font-weight:700;color:var(--tx);padding-left:26px;position:relative}
+.seg-item{font-size:.9rem;font-weight:700;color:var(--tx);padding-left:26px;position:relative}
 .seg-item::before{content:'✓';position:absolute;left:0;color:var(--vd2);font-weight:900}
 .seg-nao{background:#FFF0EC;border-radius:14px;padding:16px 18px;margin-top:8px}
-.seg-nao-titulo{font-size:.76rem;font-weight:800;color:var(--la2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;font-family:'Baloo 2',cursive}
-.seg-nao p{font-size:.85rem;color:var(--txl);line-height:1.65;font-weight:600}
+.seg-nao-titulo{font-size:.74rem;font-weight:800;color:var(--la2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;font-family:'Baloo 2',cursive}
+.seg-nao p{font-size:.84rem;color:var(--txl);line-height:1.6;font-weight:600}
 
-/* BLOCO 8 — RECAP */
+/* RECAP */
 .recap-lista{display:flex;flex-direction:column;gap:12px;margin:20px 0}
-.recap-item{font-size:.9rem;font-weight:700;padding-left:28px;position:relative;color:var(--tx)}
+.recap-item{font-size:.89rem;font-weight:700;padding-left:28px;position:relative;color:var(--tx)}
 .recap-item::before{content:'✓';position:absolute;left:0;color:var(--vd2);font-weight:900;font-size:1.05rem}
+.recap-sub{font-size:.78rem;color:var(--txl);font-weight:600;padding-left:28px;margin-top:2px}
 
-/* BLOCO 9 — OFERTA */
+/* OFERTA */
 .oferta-card{background:var(--wh);border-radius:22px;border:3px solid var(--am);box-shadow:0 8px 32px rgba(42,31,14,.14);padding:26px 20px;margin-top:20px;position:relative}
-.of-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--la);color:#fff;font-family:'Baloo 2',cursive;font-weight:900;font-size:.7rem;padding:4px 16px;border-radius:60px;white-space:nowrap}
-.of-produto-mockup{width:100%;text-align:center;margin:14px 0 20px}
-.of-produto-mockup img{max-width:240px;width:100%;margin:0 auto;border-radius:14px;box-shadow:0 6px 20px rgba(42,31,14,.15)}
+.of-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--la);color:#fff;font-family:'Baloo 2',cursive;font-weight:900;font-size:.68rem;padding:4px 16px;border-radius:60px;white-space:nowrap}
+.of-title{font-family:'Baloo 2',cursive;font-weight:900;font-size:1.1rem;color:var(--tx);text-align:center;margin:10px 0 4px}
+.of-sub{font-size:.8rem;color:var(--txl);font-weight:600;text-align:center;margin-bottom:16px}
 .of-bonus-lista{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
-.of-bonus-item{display:flex;justify-content:space-between;align-items:center;font-size:.86rem;font-weight:700;color:var(--tx);border-bottom:1px dashed var(--brd);padding-bottom:10px;gap:8px}
-.of-bonus-preco{color:#bbb;font-weight:700;text-decoration:line-through;font-size:.78rem;white-space:nowrap}
+.of-bonus-item{display:flex;justify-content:space-between;align-items:flex-start;font-size:.85rem;font-weight:700;color:var(--tx);border-bottom:1px dashed var(--brd);padding-bottom:10px;gap:8px}
+.of-bonus-item span:first-child{flex:1}
 .of-preco-wrap{text-align:center;margin:20px 0 6px}
 .of-de{font-size:.85rem;color:#bbb;text-decoration:line-through;font-weight:700;margin-bottom:3px}
-.of-preco{font-family:'Baloo 2',cursive;font-size:2.7rem;font-weight:900;color:var(--la)}
+.of-preco{font-family:'Baloo 2',cursive;font-size:2.6rem;font-weight:900;color:var(--la)}
 .of-parcela{font-size:.78rem;color:var(--txl);font-weight:700;text-align:center;margin-bottom:18px}
-.of-justif{font-size:.85rem;color:var(--txl);font-weight:600;text-align:center;margin-bottom:22px;line-height:1.65}
+.of-justif{font-size:.83rem;color:var(--txl);font-weight:600;text-align:center;margin-bottom:22px;line-height:1.6}
 
-/* BLOCO 10 — GARANTIA ISOLADA */
+/* GARANTIA */
 .gar-box{background:var(--wh);border:3px dashed var(--am);border-radius:20px;padding:24px 18px;text-align:center}
-.gar-icon{font-size:2.6rem;margin-bottom:10px}
-.gar-titulo{font-family:'Baloo 2',cursive;font-weight:900;color:var(--la);font-size:1.15rem;margin-bottom:8px}
-.gar-txt{font-size:.87rem;color:var(--tx);font-weight:600;line-height:1.7}
+.gar-icon{font-size:2.5rem;margin-bottom:10px}
+.gar-titulo{font-family:'Baloo 2',cursive;font-weight:900;color:var(--la);font-size:1.1rem;margin-bottom:8px}
+.gar-txt{font-size:.86rem;color:var(--tx);font-weight:600;line-height:1.65}
 
-/* BLOCO 11 — 2 CAMINHOS */
+/* 2 CAMINHOS */
 .antdep{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
 .ad-col{border-radius:16px;padding:18px 14px}
 .ad-antes{background:rgba(0,0,0,.18)}
 .ad-depois{background:rgba(0,0,0,.1);border:2px solid var(--am)}
-.ad-label{font-family:'Baloo 2',cursive;font-weight:900;font-size:.72rem;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;display:block}
+.ad-label{font-family:'Baloo 2',cursive;font-weight:900;font-size:.7rem;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;display:block}
 .ad-label.ant{color:rgba(255,255,255,.7)}
 .ad-label.dep{color:var(--am)}
-.ad-item{font-size:.8rem;font-weight:700;line-height:1.55;margin-bottom:8px;color:#fff}
+.ad-item{font-size:.78rem;font-weight:700;line-height:1.5;margin-bottom:8px;color:#fff}
 
-/* BLOCO 12 — ESCASSEZ */
-.escassez{background:rgba(0,0,0,.15);border:1.5px solid rgba(255,208,35,.4);border-radius:14px;padding:18px;margin:20px 0;text-align:center}
-.escassez p{font-size:.88rem;color:#fff;font-weight:700;line-height:1.7}
-.escassez strong{color:var(--am)}
-.countdown{display:flex;justify-content:center;gap:10px;margin:14px 0}
-.cd{background:rgba(0,0,0,.2);border:2px solid rgba(255,208,35,.5);border-radius:10px;padding:10px 14px;text-align:center;min-width:58px}
-.cd-n{font-family:'Baloo 2',cursive;font-weight:900;font-size:1.7rem;color:var(--am);line-height:1}
-.cd-l{font-size:.6rem;color:rgba(255,255,255,.7);font-weight:700;text-transform:uppercase}
-
-/* BLOCO 13 — AUTORIDADE */
+/* AUTORIDADE */
 .autor-box{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;margin-top:20px}
-.autor-foto{width:160px;height:160px;border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(42,31,14,.18);background:var(--brd)}
+.autor-foto{width:140px;height:140px;border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(42,31,14,.18);background:var(--brd)}
 .autor-foto img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* BLOCO 14 — SELOS */
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.faq-item{background:var(--wh);border-radius:13px;overflow:hidden;box-shadow:0 2px 10px rgba(42,31,14,.06)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:14px 16px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.86rem;color:var(--tx);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;line-height:1.4}
+.faq-arr{color:var(--la);font-size:.9rem;transition:transform .25s;flex-shrink:0}
+.faq-item.open .faq-arr{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:.83rem;color:var(--txl);line-height:1.6}
+.faq-item.open .faq-a{max-height:260px}
+.faq-ai{padding:0 16px 14px}
+
+/* SELOS */
 .selos{display:flex;justify-content:space-between;gap:10px;margin-top:8px}
 .selo{flex:1;text-align:center;font-size:.72rem;font-weight:800;color:var(--txl);line-height:1.5}
 .selo-icon{font-size:1.5rem;margin-bottom:6px}
@@ -164,53 +204,33 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
 </head>
 <body>
 
-<!-- ══════ BLOCO 1 — HEADLINE SOBRE IMAGEM DE FUNDO ══════ -->
+<!-- ══════ 1. PRIMEIRA DOBRA — promessa, programa e Corujão ══════ -->
 <section class="hero">
   <div class="hero-conteudo">
-    <span class="hero-badge">Kit imprimível · Atividades Lúdicas</span>
-    <div class="hero-h1">Seu filho tem dificuldade pra ler?<br><em>Isso muda em 21 dias.</em></div>
-    <div class="hero-sub">Qualquer mãe consegue aplicar, sem ser professora, sem curso caro, em 15 minutos por dia.</div>
-    <div class="hero-social">
+    <span class="hero-badge">Aplicativo de alfabetização · Acesso direto no navegador</span>
+    <div class="hero-h1">Ajude seu filho a avançar na leitura<br>com apenas <em>15 minutos por dia.</em></div>
+    <div class="hero-sub">Mesmo que você não seja professora e não saiba por onde começar.</div>
+    <div class="hero-tags">
+      <span class="hero-tag">Crianças de 3 a 8 anos</span>
+      <span class="hero-tag">Acesso imediato</span>
+      <span class="hero-tag">Acesso direto no navegador</span>
+      <span class="hero-tag">Tempo de tela que ensina de verdade</span>
     </div>
   </div>
-</section>
-<!-- TROCAR o background-image da .hero pela foto de uma mãe lendo com o filho -->
-
-<!-- ══════ BLOCO 2 — DEPOIMENTOS ══════ -->
-<section class="sec sec-clara">
-  <div class="wrap">
-    <span class="eyebrow">Resultados reais</span>
-    <h2 class="bloco-titulo">O que as mães estão<br><em>vivendo agora.</em></h2>
-    <div class="depo-grid">
-      <div class="depo-card">
-        <div class="depo-foto-grande"><img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/review1_2026-07-09_23-19-43.jpg?raw=true" alt="Juliana Lima"></div>
-        <div class="depo-popup">
-          <div class="depo-stars">★★★★★</div>
-          <div class="depo-txt">"Antes de conhecer o Metodo Viva ensinar para casa era um desafio diario, agora nos conseguimos até brincar durante as atividades eu amei!!"</div>
-          <div class="depo-autor">Juliana Lima</div>
-        </div>
-      </div>
-      <div class="depo-card">
-        <div class="depo-foto-grande"><img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/review2.jpg?raw=true" alt="Renata Souza"></div>
-        <div class="depo-popup">
-          <div class="depo-stars">★★★★★</div>
-          <div class="depo-txt">"Meu filho sente mais prazer em fazer as atividades exatamente pelo fato de esta aprendendo a ler e evoluindo, obrigada Marcela pelo material"</div>
-          <div class="depo-autor">Renata Souza</div>
-        </div>
-      </div>
-      <div class="depo-card">
-        <div class="depo-foto-grande"><img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/review3.jpg?raw=true" alt="Carolina Batista"></div>
-        <div class="depo-popup">
-          <div class="depo-stars">★★★★★</div>
-          <div class="depo-txt">"Meu filho tem TDAH e sempre achei que seria impossível ensinar em casa. As atividades são tão lúdicas que ele pede pra fazer. Resultado incrível."</div>
-          <div class="depo-autor">Carolina Batista</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <img class="hero-corujao-mini" src="corujao-principal.png" alt="Professor Corujão">
+  <!-- Recortar a pose "apontando" da folha de referência, com fundo transparente -->
 </section>
 
-<!-- ══════ BLOCO 3 — NÚMERO PROVA SOCIAL ══════ -->
+<div class="corujao-intro">
+  <img src="corujao-principal.png" alt="Professor Corujão">
+  <div class="corujao-intro-txt"><strong>Olá! Eu sou o Professor Corujão.</strong><br>Vou acompanhar sua família durante cada etapa da alfabetização, mostrando exatamente qual atividade aplicar e como avançar sem pressão.</div>
+</div>
+
+<div class="wrap" style="padding-top:18px">
+  <a href="#oferta" class="btn">Quero acesso ao aplicativo</a>
+</div>
+
+<!-- ══════ 2. PROVAS SOCIAIS ══════ -->
 <section class="sec sec-branca">
   <div class="wrap prova-numero">
     <div class="pn-num">+2.400</div>
@@ -218,8 +238,42 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
   </div>
 </section>
 
-<!-- ══════ BLOCO 4 — IDENTIFICAÇÃO ══════ -->
 <section class="sec sec-clara">
+  <div class="wrap">
+    <span class="eyebrow">Resultados reais</span>
+    <h2 class="bloco-titulo">O que as mães estão<br><em>vivendo agora.</em></h2>
+    <div class="depo-grid">
+      <div class="depo-card">
+        <div class="depo-foto-grande"><img src="https://i.ibb.co/hRs23F2d/4m.jpg" alt="Juliana Lima"></div>
+        <div class="depo-popup">
+          <div class="depo-stars">★★★★★</div>
+          <div class="depo-txt">"Antes, as atividades viravam um desafio diário. Com a rotina mais leve, conseguimos aprender e brincar ao mesmo tempo."</div>
+          <div class="depo-autor">Juliana Lima</div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-foto-grande"><img src="https://i.ibb.co/3yQVc2Q0/5m.jpg" alt="Renata Souza"></div>
+        <div class="depo-popup">
+          <div class="depo-stars">★★★★★</div>
+          <div class="depo-txt">"Meu filho leu um texto inteiro pra mim algumas semanas depois de começarmos. A professora já tinha me alertado sobre o atraso. Valeu cada centavo."</div>
+          <div class="depo-autor">Renata Souza</div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-foto-grande"><img src="https://i.ibb.co/wFTSZZkL/6m.jpg" alt="Carolina Batista"></div>
+        <div class="depo-popup">
+          <div class="depo-stars">★★★★★</div>
+          <div class="depo-txt">"Meu filho tem TDAH e sempre achei que seria impossível ensinar em casa. As atividades são tão lúdicas que ele pede pra fazer."</div>
+          <div class="depo-autor">Carolina Batista</div>
+        </div>
+      </div>
+    </div>
+    <p class="bloco-p" style="text-align:center;margin-top:18px;font-size:.78rem">Depoimentos de mães reais. Resultados podem variar conforme idade, frequência de uso e estágio de aprendizagem da criança.</p>
+  </div>
+</section>
+
+<!-- ══════ 3. IDENTIFICAÇÃO COM O PROBLEMA ══════ -->
+<section class="sec sec-branca">
   <div class="wrap">
     <span class="eyebrow">Isso te soa familiar?</span>
     <h2 class="bloco-titulo">Deixa eu te perguntar<br><em>uma coisa.</em></h2>
@@ -229,8 +283,8 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
         <div class="id-sub">E cada comparação dói um pouco mais.</div>
       </div>
       <div class="id-item">
-        <div class="id-titulo"><span class="id-num">2.</span>A lição de casa vira batalha e choro todo dia.</div>
-        <div class="id-sub">O que devia ser rotina virou um campo de guerra diário.</div>
+        <div class="id-titulo"><span class="id-num">2.</span>A lição de casa vira batalha quase todo dia.</div>
+        <div class="id-sub">O que devia ser rotina virou motivo de estresse.</div>
       </div>
       <div class="id-item">
         <div class="id-titulo"><span class="id-num">3.</span>Você quer ajudar, mas não sabe por onde começar.</div>
@@ -240,224 +294,365 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
         <div class="id-titulo"><span class="id-num">4.</span>Cada semana que passa é tempo que não volta.</div>
         <div class="id-sub">E essa preocupação mora na sua cabeça o dia inteiro.</div>
       </div>
+      <div class="id-item">
+        <div class="id-titulo"><span class="id-num">5.</span>Ele passa mais tempo no celular assistindo vídeo do que aprendendo alguma coisa.</div>
+        <div class="id-sub">E você sabe que aquele tempo de tela podia estar ensinando, em vez de só passar.</div>
+      </div>
     </div>
-    <p class="bloco-p" style="margin-top:6px"><strong>Não é culpa sua não saber como ajudar.</strong> Você nunca recebeu um método simples e testado. Mas isso muda agora.</p>
+    <p class="bloco-p" style="margin-top:6px"><strong>Não é culpa sua não saber como ajudar.</strong> Você provavelmente nunca recebeu um caminho simples e organizado para seguir. É isso que o programa resolve.</p>
   </div>
 </section>
 
-<!-- ══════ BLOCO 5 — MECANISMO NOMEADO ══════ -->
+<!-- ══════ 4. NÃO É APENAS MAIS UM TEMPO DE TELA ══════ -->
+<section class="sec sec-clara">
+  <div class="wrap">
+    <span class="eyebrow">Antes de continuar</span>
+    <h2 class="bloco-titulo">Não é apenas mais um tempo de tela.<br><em>É um caminho organizado para a alfabetização.</em></h2>
+    <p class="bloco-p">Vídeo solto e joguinho aleatório podem até ocupar a criança, mas nem sempre ensinam alguma coisa, e nem sempre mostram qual habilidade deve ser desenvolvida primeiro.</p>
+    <p class="bloco-p">No Método Leitura Viva, cada missão faz parte de uma sequência dentro do app. A criança começa reconhecendo letras e sons, avança para sílabas, forma palavras e chega às primeiras leituras com muito mais segurança, ganhando medalhas e certificados no caminho.</p>
+    <div class="comp-grid">
+      <div class="comp-col comp-antes">
+        <span class="comp-label">Tela solta</span>
+        <div class="comp-item">Sem ordem definida</div>
+        <div class="comp-item">A mãe não sabe o que a criança está de fato aprendendo</div>
+        <div class="comp-item">Difícil perceber evolução</div>
+        <div class="comp-item">Conteúdo desconectado</div>
+        <div class="comp-item">Só entretém, não ensina</div>
+      </div>
+      <div class="comp-col comp-depois">
+        <span class="comp-label">Método Leitura Viva</span>
+        <div class="comp-item">Ordem clara em 8 fases</div>
+        <div class="comp-item">Missões organizadas por etapa</div>
+        <div class="comp-item">Medalhas e certificados reais</div>
+        <div class="comp-item">Evolução progressiva e visível</div>
+        <div class="comp-item">Tempo de tela que ensina de verdade</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5. A JORNADA DENTRO DO APLICATIVO ══════ -->
 <section class="sec sec-escura">
   <div class="wrap">
-    <span class="eyebrow" style="color:var(--am)">O sistema por trás do resultado</span>
-    <h2 class="bloco-titulo">Conheça o<br><em>Método VIVA.</em></h2>
-    <p class="bloco-p">Quatro etapas, nessa ordem exata, é o que separa uma criança que decora letras de uma criança que realmente aprende a ler.</p>
-    <div class="mec-steps">
-      <div class="mec-step">
-        <div class="mec-num">V</div>
-        <div class="mec-txt"><strong>Ver as Letras (Alfabeto Vivo)</strong><span>Associações visuais e sonoras que fixam cada letra sem decoreba.</span></div>
+    <span class="eyebrow" style="color:var(--am)">Veja como funciona por dentro</span>
+    <h2 class="bloco-titulo">A jornada do seu filho<br><em>dentro do aplicativo.</em></h2>
+    <p class="bloco-p">O cronograma segue o Método VIVA (Ver, Interligar, Vivenciar, Aplicar), organizado em fases dentro do próprio app. Veja o passo a passo de como a experiência acontece:</p>
+
+    <div class="jornada-fase">
+      <div class="jornada-top"><div class="jornada-letra">1</div><div class="jornada-titulo">Acesso com o e-mail da compra</div></div>
+      <div class="jornada-obj">Você entra no aplicativo direto pelo navegador do celular, usando o e-mail utilizado na compra.</div>
+      <img class="jornada-img" src="app-tela-login.png" alt="Tela de acesso do aplicativo">
+    </div>
+
+    <div class="jornada-fase">
+      <div class="jornada-top"><div class="jornada-letra">2</div><div class="jornada-titulo">Criação do avatar do seu filho</div></div>
+      <div class="jornada-obj">A criança escolhe o avatar que mais combina com ela, deixando a experiência com a cara dela desde o primeiro momento.</div>
+      <img class="jornada-img" src="app-tela-avatar.png" alt="Tela de criação de avatar no aplicativo">
+    </div>
+
+    <div class="jornada-fase">
+      <div class="jornada-top"><div class="jornada-letra">3</div><div class="jornada-titulo">Acesso liberado às atividades</div></div>
+      <div class="jornada-obj">Com o avatar criado, as atividades da primeira fase já ficam disponíveis, seguindo o cronograma do Método VIVA.</div>
+      <img class="jornada-img" src="app-tela-atividades.png" alt="Tela de atividades do aplicativo">
+    </div>
+
+    <div class="jornada-fase">
+      <div class="jornada-top"><div class="jornada-letra">4</div><div class="jornada-titulo">Uma medalha a cada atividade concluída</div></div>
+      <div class="jornada-obj">Cada atividade concluída rende uma medalha, mantendo a criança motivada a continuar avançando.</div>
+      <img class="jornada-img" src="app-tela-medalha.png" alt="Tela de medalha conquistada no aplicativo">
+    </div>
+
+    <div class="jornada-fase">
+      <div class="jornada-top"><div class="jornada-letra">5</div><div class="jornada-titulo">Um certificado ao final de cada fase</div></div>
+      <div class="jornada-obj">Ao concluir todas as atividades de uma fase, a criança recebe um certificado, reforçando o senso de conquista.</div>
+      <img class="jornada-img" src="app-tela-certificado.png" alt="Tela de certificado conquistado no aplicativo">
+    </div>
+
+    <div class="jornada-fase">
+      <div class="jornada-top"><div class="jornada-letra">6</div><div class="jornada-titulo">No celular ou para imprimir, você escolhe</div></div>
+      <div class="jornada-obj">A maioria das atividades pode ser feita direto na tela. Se preferir, também é possível baixar uma atividade específica para imprimir.</div>
+      <img class="jornada-img" src="app-tela-opcoes.png" alt="Tela de opções de atividade no aplicativo">
+    </div>
+
+    <p class="bloco-p" style="margin-top:6px">São diversas fases seguindo esse mesmo cronograma. Ao final, seu filho já domina as letrinhas e dá os primeiros passos como leitor de verdade.</p>
+    <!-- Trocar cada jornada-img por uma captura real de tela do aplicativo -->
+  </div>
+</section>
+
+<!-- ══════ 6. LINHA DE EVOLUÇÃO ══════ -->
+<section class="sec sec-branca">
+  <div class="wrap">
+    <span class="eyebrow">Como a evolução acontece</span>
+    <h2 class="bloco-titulo">Uma evolução<br><em>construída passo a passo.</em></h2>
+    <div class="id-lista">
+      <div class="id-item">
+        <div class="id-titulo"><span class="id-num">1.</span>Etapa inicial</div>
+        <div class="id-sub">Reconhecimento de letras, associação entre forma e som, familiaridade com o alfabeto.</div>
       </div>
-      <div class="mec-step">
-        <div class="mec-num">I</div>
-        <div class="mec-txt"><strong>Interligar Sílabas (Sílabas Mágicas)</strong><span>Do BA-BE-BI até sílabas complexas, sem frustração.</span></div>
+      <div class="id-item">
+        <div class="id-titulo"><span class="id-num">2.</span>Próximo avanço</div>
+        <div class="id-sub">Identificação e repetição de sílabas, junção de sons, desenvolvimento da memória.</div>
       </div>
-      <div class="mec-step">
-        <div class="mec-num">V</div>
-        <div class="mec-txt"><strong>Vivenciar Palavras (Formando Palavras)</strong><span>Montagem de palavras que desenvolve vocabulário na prática, brincando.</span></div>
+      <div class="id-item">
+        <div class="id-titulo"><span class="id-num">3.</span>Construção da leitura</div>
+        <div class="id-sub">Formação de palavras, associação entre palavras e imagens, aumento do vocabulário.</div>
       </div>
-      <div class="mec-step">
-        <div class="mec-num">A</div>
-        <div class="mec-txt"><strong>Aplicar na Leitura (Primeiras Leituras)</strong><span>Textos curtos pensados para a primeira leitura real, sem sobrecarga.</span></div>
+      <div class="id-item">
+        <div class="id-titulo"><span class="id-num">4.</span>Primeiras leituras</div>
+        <div class="id-sub">Leitura de palavras, contato com frases curtas, mais confiança e autonomia.</div>
+      </div>
+    </div>
+    <p class="bloco-p" style="margin-top:10px;font-size:.82rem">Cada criança possui seu próprio ritmo. A frequência, a idade, o estágio atual e a forma de aplicação podem influenciar a evolução.</p>
+  </div>
+</section>
+
+<!-- ══════ 7. PRODUTO POR DENTRO ══════ -->
+<section class="sec sec-clara">
+  <div class="wrap">
+    <span class="eyebrow">Veja por dentro</span>
+    <h2 class="bloco-titulo">Tudo o que seu filho<br><em>vai receber.</em></h2>
+    <div class="galeria-grid">
+      <div class="galeria-item"><img src="fase-1.jpg" alt="Fase 1 — Descobrindo as Palavras"><div class="galeria-label">🌱 Fase 1 — Descobrindo as Palavras</div></div>
+      <div class="galeria-item"><img src="fase-2.jpg" alt="Fase 2 — Sílabas em Ação"><div class="galeria-label">🌈 Fase 2 — Sílabas em Ação</div></div>
+      <div class="galeria-item"><img src="fase-3.jpg" alt="Fase 3 — Detetives das Sílabas"><div class="galeria-label">✂️ Fase 3 — Detetives das Sílabas</div></div>
+      <div class="galeria-item"><img src="fase-4.jpg" alt="Fase 4 — Construtores de Palavras"><div class="galeria-label">🧩 Fase 4 — Construtores de Palavras</div></div>
+      <div class="galeria-item"><img src="fase-5.jpg" alt="Fase 5 — Primeiros Passos na Leitura"><div class="galeria-label">📖 Fase 5 — Primeiros Passos na Leitura</div></div>
+      <div class="galeria-item"><img src="fase-6.jpg" alt="Fase 6 — Aventuras nas Frases"><div class="galeria-label">📚 Fase 6 — Aventuras nas Frases</div></div>
+      <div class="galeria-item"><img src="fase-7.jpg" alt="Fase 7 — Missão Leitura Completa"><div class="galeria-label">🎯 Fase 7 — Missão Leitura Completa</div></div>
+      <div class="galeria-item"><img src="fase-8.jpg" alt="Fase 8 — Desafio das Sílabas Complexas"><div class="galeria-label">🧠 Fase 8 — Desafio das Sílabas Complexas</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 8. COMO APLICAR EM 15 MINUTOS ══════ -->
+<section class="sec sec-branca">
+  <div class="wrap">
+    <span class="eyebrow">É mais simples do que parece</span>
+    <h2 class="bloco-titulo">Você não precisa inventar atividades<br><em>ou preparar aulas.</em></h2>
+    <p class="bloco-p">Basta seguir a ordem recomendada, separar aproximadamente 15 minutos e acompanhar seu filho durante a atividade indicada.</p>
+    <div class="rotina-steps">
+      <div class="rotina-step"><div class="rotina-num">1</div><div class="rotina-txt"><strong>Escolha</strong><span>A atividade indicada para a etapa atual.</span></div></div>
+      <div class="rotina-step"><div class="rotina-num">2</div><div class="rotina-txt"><strong>Aplique</strong><span>Faça a atividade ao lado da criança, sem pressão e respeitando seu ritmo.</span></div></div>
+      <div class="rotina-step"><div class="rotina-num">3</div><div class="rotina-txt"><strong>Repita</strong><span>Repita os estímulos necessários para fortalecer o aprendizado.</span></div></div>
+      <div class="rotina-step"><div class="rotina-num">4</div><div class="rotina-txt"><strong>Avance</strong><span>Observe a evolução e avance para a próxima etapa.</span></div></div>
+    </div>
+    <div class="rotina-destaque">Sem precisar ser professora. Sem passar horas preparando materiais. Sem depender de atividades aleatórias encontradas na internet.</div>
+  </div>
+</section>
+
+<!-- ══════ 9. GUIA DA MÃE ══════ -->
+<section class="sec sec-clara">
+  <div class="wrap">
+    <span class="eyebrow">Parte central do programa</span>
+    <h2 class="bloco-titulo">Você também recebe orientação<br><em>para saber exatamente como aplicar.</em></h2>
+    <p class="bloco-p">Você não vai receber um conjunto de páginas e ficar sozinha tentando entender como usar. O Guia da Mãe foi criado para transformar o material em uma rotina simples e aplicável.</p>
+    <div class="guia-box">
+      <img class="guia-img" src="guia-da-mae.png" alt="Guia da Mãe">
+      <div class="guia-lista">
+        <div class="guia-item">Como começar</div>
+        <div class="guia-item">Quanto tempo dedicar</div>
+        <div class="guia-item">Como escolher a atividade certa</div>
+        <div class="guia-item">Quando repetir e quando avançar</div>
+        <div class="guia-item">Como manter a criança interessada, sem pressão</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════ BLOCO 6 — AUTORIDADE / POR QUE FUNCIONA ══════ -->
+<!-- ══════ 10. PARA QUEM É ══════ -->
 <section class="sec sec-branca">
-  <div class="wrap">
-    <span class="eyebrow">Por que funciona</span>
-    <h2 class="bloco-titulo">Por que o Método VIVA funciona<br><em>quando a cartilha da escola não foi suficiente.</em></h2>
-    <p class="bloco-p">Você já deve ter ouvido "em casa é diferente, ele não presta atenção em mim como presta na professora". Isso não é falta de respeito, é falta de método. Criança pequena não aprende a ler ouvindo explicação, aprende brincando e repetindo até o cérebro reconhecer o padrão sozinho.</p>
-    <p class="bloco-p">É por isso que muita mãe tenta ajudar com a cartilha da escola, senta do lado, insiste, e sai da mesa se sentindo incapaz. O problema nunca foi você. Era a ferramenta errada pra fase certa.</p>
-    <p class="bloco-p">O Método VIVA foi montado pra caber na sua rotina real: 15 minutos, sem preparar nada, sem ser professora. <strong>Só seguir a ordem V-I-V-A e deixar a criança pedir pra continuar.</strong></p>
-  </div>
-</section>
-
-<!-- ══════ BLOCO 7 — SEGMENTAÇÃO ══════ -->
-<section class="sec sec-clara">
   <div class="wrap">
     <h2 class="bloco-titulo">O Leitura Viva é para você<br><em>que:</em></h2>
     <div class="seg-lista">
       <div class="seg-item">Tem um filho de 3 a 8 anos que ainda não lê ou lê com dificuldade</div>
       <div class="seg-item">Quer ajudar em casa, mas não sabe por onde começar</div>
-      <div class="seg-item">Tem só 15 minutos por dia pra dedicar a isso</div>
+      <div class="seg-item">Tem cerca de 15 minutos por dia pra dedicar a isso</div>
       <div class="seg-item">Não tem experiência de professora e nunca teve</div>
-      <div class="seg-item">Quer algo lúdico, que a criança peça pra fazer</div>
+      <div class="seg-item">Quer uma rotina organizada, não atividades soltas</div>
     </div>
     <div class="seg-nao">
       <div class="seg-nao-titulo">Não é para você se</div>
-      <p>Seu filho já foi diagnosticado com uma condição que exige acompanhamento pedagógico ou terapêutico especializado. Nesse caso, o método pode complementar, mas não substitui o acompanhamento profissional.</p>
+      <p>Seu filho já foi diagnosticado com uma condição que exige acompanhamento pedagógico, médico ou terapêutico específico. Nesse caso, o programa pode complementar, mas não substitui esse acompanhamento.</p>
     </div>
   </div>
 </section>
 
-<!-- ══════ BLOCO 8 — RECAP ══════ -->
-<section class="sec sec-branca">
+<!-- ══════ 11. TUDO O QUE A CLIENTE RECEBE ══════ -->
+<section class="sec sec-clara">
   <div class="wrap">
-    <h2 class="bloco-titulo">O que você recebe<br><em>hoje.</em></h2>
+    <h2 class="bloco-titulo">O que você recebe<br><em>no programa completo.</em></h2>
     <div class="recap-lista">
-      <div class="recap-item">6 módulos com +200 atividades imprimíveis</div>
-      <div class="recap-item">Guia da Mãe, passo a passo, sem experiência necessária</div>
-      <div class="recap-item">4 bônus inclusos (colorir, jogos, certificado, calendário)</div>
-      <div class="recap-item">Acesso imediato, imprime em casa quando quiser</div>
-      <div class="recap-item">Garantia de 7 dias, sem perguntas</div>
+      <div class="recap-item">Aplicativo Método Leitura Viva: 8 fases completas, com missões dentro de cada uma
+        <div class="recap-sub">Desde as primeiras letras até a leitura de frases, com medalhas e certificados a cada conquista</div>
+      </div>
+      <div class="recap-item">Guia de Aplicação para a Família
+        <div class="recap-sub">Orientações para saber como começar, aplicar, repetir e avançar</div>
+      </div>
+      <div class="recap-item">Recursos complementares
+        <div class="recap-sub">Módulo de colorir letras, jogos de sílabas interativos, calendário de leitura digital, certificado infantil</div>
+      </div>
+      <div class="recap-item">Acesso imediato, direto no navegador do celular, sem precisar baixar nada</div>
+      <div class="recap-item">Garantia de 7 dias</div>
     </div>
   </div>
 </section>
 
-<!-- ══════ BLOCO 9 — OFERTA ══════ -->
-<section class="sec sec-clara" id="oferta">
+<!-- ══════ 12. OFERTA POR R$47 ══════ -->
+<section class="sec sec-branca" id="oferta">
   <div class="wrap">
     <span class="eyebrow">Sua oferta</span>
-    <h2 class="bloco-titulo">Invista no futuro<br><em>do seu filho hoje.</em></h2>
+    <h2 class="bloco-titulo">Todo o Aplicativo Método Leitura Viva<br><em>por apenas R$47, em pagamento único.</em></h2>
 
     <div class="oferta-card">
-      <div class="of-badge">Mais escolhido pelas mães</div>
-      <div class="of-produto-mockup">
-        <img src="https://raw.githubusercontent.com/aprendendofacil/metodoleituraviva/main/produto.png" alt="Método Leitura Viva, kit completo">
-      </div>
+      <div class="of-badge">Mais escolhido pelas famílias</div>
+      <div class="of-title">Aplicativo Método Leitura Viva</div>
+      <div class="of-sub">Você recebe acesso completo ao aplicativo por 1 ano, direto no navegador do celular. Não precisa baixar nada nas lojas de aplicativo.</div>
 
       <div class="of-bonus-lista">
-        <div class="of-bonus-item"><span>6 Módulos com +200 atividades</span><span class="of-bonus-preco">R$197</span></div>
-        <div class="of-bonus-item"><span>Guia da Mãe passo a passo</span><span class="of-bonus-preco">R$37</span></div>
-        <div class="of-bonus-item"><span>Bônus: Caderno de Colorir Letras</span><span class="of-bonus-preco">R$37</span></div>
-        <div class="of-bonus-item"><span>Bônus: Jogos de Sílabas Imprimíveis</span><span class="of-bonus-preco">R$47</span></div>
-        <div class="of-bonus-item"><span>Bônus: Certificado Infantil</span><span class="of-bonus-preco">R$27,00</span></div>
-        <div class="of-bonus-item"><span>Bônus: Calendário de Leitura 30 Dias</span><span class="of-bonus-preco">R$27,00</span></div>
+        <div class="of-bonus-item"><span>🌱 Fase 1 — Descobrindo as Palavras</span></div>
+        <div class="of-bonus-item"><span>🌈 Fase 2 — Sílabas em Ação</span></div>
+        <div class="of-bonus-item"><span>✂️ Fase 3 — Detetives das Sílabas</span></div>
+        <div class="of-bonus-item"><span>🧩 Fase 4 — Construtores de Palavras</span></div>
+        <div class="of-bonus-item"><span>📖 Fase 5 — Primeiros Passos na Leitura</span></div>
+        <div class="of-bonus-item"><span>📚 Fase 6 — Aventuras nas Frases</span></div>
+        <div class="of-bonus-item"><span>🎯 Fase 7 — Missão Leitura Completa</span></div>
+        <div class="of-bonus-item"><span>🧠 Fase 8 — Desafio das Sílabas Complexas</span></div>
       </div>
 
       <div class="of-preco-wrap">
-        <div class="of-de">De R$372,00</div>
-        <div class="of-preco">R$14,90</div>
+        <div class="of-de">Valor do programa completo: R$197</div>
+        <div class="of-preco">R$47</div>
       </div>
-      <div class="of-parcela">pagamento único · acesso vitalício</div>
+      <div class="of-parcela">Pagamento único · acesso de 1 ano</div>
 
-      <div class="of-justif">Por R$14,90 menos do que um livro infantil, você tem tudo que precisa para o seu filho ler com confiança.</div>
+      <div class="of-justif">Por menos do que o valor de alguns materiais pedagógicos avulsos, você recebe um aplicativo completo de alfabetização, com missões, medalhas e certificados, substituindo o tempo de tela por algo que de fato ensina.</div>
 
-      <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn">Quero meu filho lendo agora</a>
+      <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn">Quero acesso ao aplicativo</a>
       <div style="text-align:center;font-size:.72rem;color:var(--txl);margin-top:9px;font-weight:700">Pix · Cartão · Boleto &nbsp;|&nbsp; Acesso imediato</div>
+      <div style="text-align:center;font-size:.72rem;color:var(--txl);margin-top:4px;font-weight:700">Pagamento único · Garantia de 7 dias</div>
     </div>
   </div>
 </section>
 
-<!-- ══════ BLOCO 10 — GARANTIA ISOLADA ══════ -->
-<section class="sec sec-branca">
+<!-- ══════ 13. GARANTIA ══════ -->
+<section class="sec sec-clara">
   <div class="wrap">
     <div class="gar-box">
       <div class="gar-icon">🛡️</div>
-      <div class="gar-titulo">Garantia Total de 7 Dias</div>
-      <div class="gar-txt">Se em 7 dias o material não trouxer resultado, devolvemos 100% do seu investimento sem perguntas e sem burocracia.</div>
+      <div class="gar-titulo">Garantia de 7 Dias</div>
+      <div class="gar-txt">Você terá 7 dias para conhecer o material. Caso perceba que o programa não atende às necessidades da sua família, poderá solicitar o reembolso integral dentro desse período.</div>
     </div>
   </div>
 </section>
 
-<!-- ══════ BLOCO 11 — 2 CAMINHOS ══════ -->
+<!-- ══════ 14. COMPARAÇÃO ANTES E DEPOIS ══════ -->
 <section class="sec sec-escura">
   <div class="wrap">
     <h2 class="bloco-titulo">Você tem<br><em>2 caminhos agora.</em></h2>
     <div class="antdep">
       <div class="ad-col ad-antes">
-        <span class="ad-label ant">Sem o método</span>
-        <div class="ad-item">❌ A lição de casa continua batalha</div>
-        <div class="ad-item">❌ A comparação com os colegas dói mais</div>
-        <div class="ad-item">❌ Você continua sem saber por onde começar</div>
-        <div class="ad-item">❌ Mais uma semana perdida</div>
+        <span class="ad-label ant">Sem o programa</span>
+        <div class="ad-item">A lição de casa continua batalha</div>
+        <div class="ad-item">A comparação com os colegas dói mais</div>
+        <div class="ad-item">Você continua sem saber por onde começar</div>
+        <div class="ad-item">Mais uma semana sem rotina clara</div>
       </div>
       <div class="ad-col ad-depois">
-        <span class="ad-label dep">Com o método</span>
-        <div class="ad-item">✅ 15 minutos por dia, sem drama</div>
-        <div class="ad-item">✅ Seu filho pede pra fazer</div>
-        <div class="ad-item">✅ Você sabe exatamente o próximo passo</div>
-        <div class="ad-item">✅ Resultado visível em 21 dias</div>
+        <span class="ad-label dep">Com o programa</span>
+        <div class="ad-item">15 minutos por dia, sem drama</div>
+        <div class="ad-item">Seu filho pede pra fazer</div>
+        <div class="ad-item">Você sabe exatamente o próximo passo</div>
+        <div class="ad-item">Evolução acompanhada, etapa por etapa</div>
       </div>
     </div>
     <p class="bloco-p" style="text-align:center;margin-top:8px">A diferença entre os dois começa com um passo pequeno, hoje.</p>
-    <a href="#oferta" class="btn">Quero dar esse primeiro passo</a>
+    <a href="#oferta" class="btn">Quero acesso ao aplicativo</a>
   </div>
 </section>
 
-<!-- ══════ BLOCO 12 — ESCASSEZ ══════ -->
-<section class="sec sec-clara">
-  <div class="wrap">
-    <div class="escassez">
-      <p>O desconto de <strong>55% OFF</strong> é uma condição promocional por tempo limitado.</p>
-      <div class="countdown">
-        <div class="cd"><div class="cd-n" id="cdh">00</div><div class="cd-l">Horas</div></div>
-        <div class="cd"><div class="cd-n" id="cdm">00</div><div class="cd-l">Min</div></div>
-        <div class="cd"><div class="cd-n" id="cds">00</div><div class="cd-l">Seg</div></div>
-      </div>
-    </div>
-    <a href="#oferta" class="btn">Garantir meu acesso agora</a>
-  </div>
-</section>
-
-<!-- ══════ BLOCO 13 — AUTORIDADE ══════ -->
+<!-- ══════ 15. AUTORIDADE INSTITUCIONAL ══════ -->
 <section class="sec sec-branca">
   <div class="wrap">
     <span class="eyebrow">Quem está por trás</span>
-    <h2 class="bloco-titulo" style="text-align:center">A história do<br><em>Método Leitura Viva.</em></h2>
+    <h2 class="bloco-titulo" style="text-align:center">Quem está por trás<br><em>do Método Leitura Viva.</em></h2>
     <div class="autor-box">
       <div class="autor-foto">
-        <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/istockphoto-1634302096-612x612.jpg?raw=true" alt="Criadora do Método Leitura Viva">
+        <img src="corujao-lendo.png" alt="Professor Corujão">
+        <!-- Recortar a pose "lendo um livro" da folha de referência -->
       </div>
-      <!-- SUBSTITUIR pela foto real de quem representa o método -->
-      <p class="bloco-p" style="text-align:center">O Método Leitura Viva nasceu da prática direta com centenas de crianças que travavam na alfabetização por métodos tradicionais. As atividades foram organizadas e testadas com famílias reais até chegar no formato que hoje ajuda milhares de mães em casa.</p>
+      <p class="bloco-p" style="text-align:center">O Método Leitura Viva é um projeto educacional criado para ajudar famílias a transformar a alfabetização em uma rotina mais simples, organizada e acolhedora. Os materiais reúnem atividades progressivas, estímulos visuais e práticas de leitura que podem complementar o aprendizado realizado na escola.</p>
     </div>
   </div>
 </section>
 
-<!-- ══════ BLOCO 14 — SELOS DE CONFIANÇA ══════ -->
+<!-- ══════ 16. PERGUNTAS FREQUENTES ══════ -->
 <section class="sec sec-clara">
   <div class="wrap">
-    <div class="selos">
-      <div class="selo"><div class="selo-icon">🔒</div>Pagamento seguro</div>
-      <div class="selo"><div class="selo-icon">📲</div>Recebe na hora</div>
-      <div class="selo"><div class="selo-icon">🖨️</div>Imprime em casa</div>
+    <span class="eyebrow">Dúvidas rápidas</span>
+    <h2 class="bloco-titulo">Perguntas<br><em>frequentes.</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="tFaq(this)">Preciso ser professora para aplicar? <span class="faq-arr">▼</span></button>
+        <div class="faq-a"><div class="faq-ai">Não. O programa foi organizado para que pais e responsáveis consigam seguir as atividades com orientações simples.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tFaq(this)">Para qual idade é indicado? <span class="faq-arr">▼</span></button>
+        <div class="faq-a"><div class="faq-ai">O conteúdo foi pensado principalmente para crianças de 3 a 8 anos, mas a indicação depende do estágio de aprendizagem da criança.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tFaq(this)">Preciso baixar algum aplicativo na loja? <span class="faq-arr">▼</span></button>
+        <div class="faq-a"><div class="faq-ai">Não. O acesso é direto pelo navegador do celular, tablet ou computador. Não é preciso baixar nada na App Store ou Google Play.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tFaq(this)">Funciona em qualquer celular? <span class="faq-arr">▼</span></button>
+        <div class="faq-a"><div class="faq-ai">Sim. Funciona em qualquer celular ou tablet com acesso à internet e navegador atualizado, seja Android ou iPhone.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tFaq(this)">Preciso estar com internet o tempo todo? <span class="faq-arr">▼</span></button>
+        <div class="faq-a"><div class="faq-ai">Não necessariamente. Além de fazer as missões direto na tela, você também pode baixar a fase completa, executar as atividades e depois marcar como concluída no aplicativo para ganhar as medalhas e liberar a próxima fase.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tFaq(this)">Quanto tempo devo aplicar por dia? <span class="faq-arr">▼</span></button>
+        <div class="faq-a"><div class="faq-ai">A recomendação é começar com aproximadamente 15 minutos, respeitando o interesse e o ritmo da criança.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tFaq(this)">Serve para crianças com dificuldade de aprendizagem? <span class="faq-arr">▼</span></button>
+        <div class="faq-a"><div class="faq-ai">O material pode complementar a rotina educacional, mas não substitui acompanhamento pedagógico, médico ou terapêutico quando necessário.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tFaq(this)">Por quanto tempo terei acesso? <span class="faq-arr">▼</span></button>
+        <div class="faq-a"><div class="faq-ai">O acesso ao aplicativo é válido por 1 ano a partir da confirmação do pagamento.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="tFaq(this)">Como recebo o acesso ao aplicativo? <span class="faq-arr">▼</span></button>
+        <div class="faq-a"><div class="faq-ai">Após a confirmação do pagamento, você recebe por e-mail o link de acesso ao aplicativo. É só abrir no navegador do celular e começar.</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══════ BLOCO 15 — REFORÇO FINAL ══════ -->
-<section class="sec sec-escura" style="text-align:center">
+<!-- ══════ 17. REFORÇO FINAL ══════ -->
+<section class="sec sec-azul" style="text-align:center">
   <div class="wrap">
-    <h2 class="bloco-titulo">Não deixe seu filho perder<br><em>essa janela de aprendizado.</em></h2>
-    <div style="font-family:'Baloo 2',cursive;font-size:2rem;font-weight:900;color:var(--am);margin:10px 0">R$14,90</div>
-    <div class="bloco-p" style="text-align:center">acesso imediato · garantia de 7 dias</div>
-    <a href="#oferta" class="btn">Quero meu filho lendo agora</a>
+    <h2 class="bloco-titulo">21 dias para construir<br><em>uma rotina de aprendizado em casa.</em></h2>
+    <div style="font-family:'Baloo 2',cursive;font-size:2rem;font-weight:900;color:var(--am);margin:10px 0">R$47</div>
+    <div class="bloco-p" style="text-align:center">Pagamento único · acesso de 1 ano · garantia de 7 dias</div>
+    <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn">Quero acesso ao aplicativo</a>
   </div>
 </section>
 
+<!-- ══════ 18. RODAPÉ ══════ -->
 <footer>
   <p>© 2026 Método Leitura Viva. Todos os direitos reservados.</p>
-  <p>Produto 100% digital. Resultados podem variar conforme frequência de uso.</p>
+  <p>Produto 100% digital. Resultados podem variar conforme frequência de uso, idade e estágio de aprendizagem da criança.</p>
   <p>Este site não é afiliado ao Facebook Inc.</p>
 </footer>
 
 <script>
-(function(){
-  function getExp(){var s=sessionStorage.getItem('lv_exp');if(s)return parseInt(s);var e=Date.now()+(23*3600+59*60+59)*1000;sessionStorage.setItem('lv_exp',e);return e}
-  var exp=getExp();
-  function tick(){
-    var d=Math.max(0,Math.floor((exp-Date.now())/1000));
-    document.getElementById('cdh').textContent=String(Math.floor(d/3600)).padStart(2,'0');
-    document.getElementById('cdm').textContent=String(Math.floor((d%3600)/60)).padStart(2,'0');
-    document.getElementById('cds').textContent=String(d%60).padStart(2,'0');
-  }
-  tick();setInterval(tick,1000);
-})();
+function tFaq(btn){var item=btn.closest('.faq-item'),was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!was)item.classList.add('open')}
 
 window.addEventListener('load',function(){
-  if(window.fbq)fbq('track','ViewContent',{content_name:'Método Leitura Viva',content_ids:['metodo-leitura-viva'],content_type:'product',value:19.90,currency:'BRL'});
+  if(window.fbq)fbq('track','ViewContent',{content_name:'Método Leitura Viva',content_ids:['metodo-leitura-viva'],content_type:'product',value:47.00,currency:'BRL'});
 });
 </script>
 </body>
