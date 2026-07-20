@@ -54,7 +54,7 @@ img{max-width:100%;display:block}
 .eyebrow{display:inline-block;font-family:'Baloo 2',cursive;font-weight:800;font-size:.7rem;letter-spacing:1.1px;text-transform:uppercase;color:var(--la);margin-bottom:8px}
 
 /* BLOCO 1 — HERO */
-.hero{position:relative;min-height:78vh;display:flex;flex-direction:column;background-image:url('https://github.com/aprendendofacil/metodoleituraviva/blob/main/3e9fd431-bbc8-46b6-b0df-43f8c1ac8397.png?raw=true');background-size:cover;background-position:top center;overflow:hidden}
+.hero{position:relative;min-height:78vh;display:flex;flex-direction:column;background-image:url('https://raw.githubusercontent.com/aprendendofacil/metodoleituraviva/main/hero-mae-filho.jpg');background-size:cover;background-position:top center;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(42,31,14,.88) 0%,rgba(42,31,14,.5) 34%,rgba(42,31,14,.08) 55%,rgba(42,31,14,.55) 100%)}
 .hero-conteudo{position:relative;z-index:2;padding:40px 22px 0;text-align:center}
 .hero-badge{display:inline-flex;align-items:center;gap:5px;background:var(--am);color:var(--tx);font-family:'Baloo 2',cursive;font-weight:800;font-size:.68rem;padding:4px 14px;border-radius:60px;margin-bottom:14px;letter-spacing:.3px;text-transform:uppercase}
@@ -80,7 +80,16 @@ img{max-width:100%;display:block}
 .depo-txt{font-size:.87rem;font-weight:600;color:#fff;line-height:1.65;margin-bottom:10px;text-align:left}
 .depo-autor{font-family:'Baloo 2',cursive;font-size:.84rem;font-weight:800;color:var(--am)}
 
-/* IDENTIFICAÇÃO */
+/* IDENTIFICAÇÃO — estilo cards com X, adaptado à paleta da marca */
+.sec-preta{background:var(--tx);color:#fff}
+.ident-titulo{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.3rem,5.5vw,1.9rem);line-height:1.25;color:#fff;text-transform:uppercase;margin-bottom:22px}
+.ident-titulo em{font-style:normal;color:var(--am)}
+.ident-cards{display:flex;flex-direction:column;gap:12px}
+.ident-card{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.1);border-radius:16px;padding:16px}
+.ident-x{width:30px;height:30px;border-radius:50%;background:rgba(255,208,35,.2);color:var(--am);display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0;font-size:.9rem}
+.ident-txt{font-size:.9rem;font-weight:600;line-height:1.6;color:#fff}
+
+/* usado também na Linha de Evolução */
 .id-lista{display:flex;flex-direction:column;gap:0;margin:20px 0}
 .id-item{padding:16px 0;border-bottom:1px solid var(--brd)}
 .id-item:last-child{border-bottom:none}
@@ -259,59 +268,30 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
 </section>
 
 <!-- ══════ 3. IDENTIFICAÇÃO COM O PROBLEMA ══════ -->
-<section class="sec sec-branca">
+<section class="sec sec-preta">
   <div class="wrap">
-    <span class="eyebrow">Isso te soa familiar?</span>
-    <h2 class="bloco-titulo">Deixa eu te perguntar<br><em>uma coisa.</em></h2>
-    <div class="id-lista">
-      <div class="id-item">
-        <div class="id-titulo"><span class="id-num">1.</span>Ele trava nas letras enquanto os colegas já leem com facilidade.</div>
-        <div class="id-sub">E cada comparação dói um pouco mais.</div>
+    <span class="eyebrow" style="color:var(--la)">Isso te soa familiar?</span>
+    <h2 class="ident-titulo">SE VOCÊ SE IDENTIFICA COM<br><em>PELO MENOS 3 DESSES</em>,<br>ESSE APLICATIVO FOI FEITO PRA VOCÊ:</h2>
+    <div class="ident-cards">
+      <div class="ident-card">
+        <div class="ident-x">✕</div>
+        <div class="ident-txt">Ele trava nas letras enquanto os colegas já leem com facilidade, e cada comparação dói um pouco mais.</div>
       </div>
-      <div class="id-item">
-        <div class="id-titulo"><span class="id-num">2.</span>A lição de casa vira batalha quase todo dia.</div>
-        <div class="id-sub">O que devia ser rotina virou motivo de estresse.</div>
+      <div class="ident-card">
+        <div class="ident-x">✕</div>
+        <div class="ident-txt">A lição de casa vira batalha quase todo dia, o que devia ser rotina virou motivo de estresse.</div>
       </div>
-      <div class="id-item">
-        <div class="id-titulo"><span class="id-num">3.</span>Você quer ajudar, mas não sabe por onde começar.</div>
-        <div class="id-sub">Falta um caminho claro, não falta amor nem esforço.</div>
+      <div class="ident-card">
+        <div class="ident-x">✕</div>
+        <div class="ident-txt">Você quer ajudar, mas não sabe por onde começar. Falta um caminho claro, não falta amor nem esforço.</div>
       </div>
-      <div class="id-item">
-        <div class="id-titulo"><span class="id-num">4.</span>Cada semana que passa é tempo que não volta.</div>
-        <div class="id-sub">E essa preocupação mora na sua cabeça o dia inteiro.</div>
+      <div class="ident-card">
+        <div class="ident-x">✕</div>
+        <div class="ident-txt">Cada semana que passa é tempo que não volta, e essa preocupação mora na sua cabeça o dia inteiro.</div>
       </div>
-      <div class="id-item">
-        <div class="id-titulo"><span class="id-num">5.</span>Ele passa mais tempo no celular assistindo vídeo do que aprendendo alguma coisa.</div>
-        <div class="id-sub">E você sabe que aquele tempo de tela podia estar ensinando, em vez de só passar.</div>
-      </div>
-    </div>
-    <p class="bloco-p" style="margin-top:6px"><strong>Não é culpa sua não saber como ajudar.</strong> Você provavelmente nunca recebeu um caminho simples e organizado para seguir. É isso que o programa resolve.</p>
-  </div>
-</section>
-
-<!-- ══════ 4. NÃO É APENAS MAIS UM TEMPO DE TELA ══════ -->
-<section class="sec sec-clara">
-  <div class="wrap">
-    <span class="eyebrow">Antes de continuar</span>
-    <h2 class="bloco-titulo">Não é apenas mais um tempo de tela.<br><em>É um caminho organizado para a alfabetização.</em></h2>
-    <p class="bloco-p">Vídeo solto e joguinho aleatório podem até ocupar a criança, mas nem sempre ensinam alguma coisa, e nem sempre mostram qual habilidade deve ser desenvolvida primeiro.</p>
-    <p class="bloco-p">No Método Leitura Viva, cada missão faz parte de uma sequência dentro do app. A criança começa reconhecendo letras e sons, avança para sílabas, forma palavras e chega às primeiras leituras com muito mais segurança, ganhando medalhas e certificados no caminho.</p>
-    <div class="comp-grid">
-      <div class="comp-col comp-antes">
-        <span class="comp-label">Tela solta</span>
-        <div class="comp-item">Sem ordem definida</div>
-        <div class="comp-item">A mãe não sabe o que a criança está de fato aprendendo</div>
-        <div class="comp-item">Difícil perceber evolução</div>
-        <div class="comp-item">Conteúdo desconectado</div>
-        <div class="comp-item">Só entretém, não ensina</div>
-      </div>
-      <div class="comp-col comp-depois">
-        <span class="comp-label">Método Leitura Viva</span>
-        <div class="comp-item">Ordem clara em 8 fases</div>
-        <div class="comp-item">Missões organizadas por etapa</div>
-        <div class="comp-item">Medalhas e certificados reais</div>
-        <div class="comp-item">Evolução progressiva e visível</div>
-        <div class="comp-item">Tempo de tela que ensina de verdade</div>
+      <div class="ident-card">
+        <div class="ident-x">✕</div>
+        <div class="ident-txt">Ele passa mais tempo no celular assistindo vídeo do que aprendendo alguma coisa, e aquele tempo de tela podia estar ensinando, em vez de só passar.</div>
       </div>
     </div>
   </div>
@@ -428,17 +408,16 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
 <!-- ══════ 9. GUIA DA MÃE ══════ -->
 <section class="sec sec-clara">
   <div class="wrap">
-    <span class="eyebrow">Parte central do programa</span>
+    <span class="eyebrow">Parte central do aplicativo</span>
     <h2 class="bloco-titulo">Você também recebe orientação<br><em>para saber exatamente como aplicar.</em></h2>
-    <p class="bloco-p">Você não vai receber um conjunto de páginas e ficar sozinha tentando entender como usar. O Guia da Mãe foi criado para transformar o material em uma rotina simples e aplicável.</p>
+    <p class="bloco-p">Cada atividade dentro do aplicativo possui uma instrução clara para a mãe, o pai ou o responsável, orientando como conduzir o momento da forma correta e ajudar a criança a executar a atividade com segurança, favorecendo o melhor desenvolvimento do seu pequeno.</p>
     <div class="guia-box">
       <img class="guia-img" src="https://raw.githubusercontent.com/aprendendofacil/metodoleituraviva/main/INSTRU%C3%87%C3%95ES%20PARA%20MAM%C3%83E.jpg" alt="Guia da Mãe">
       <div class="guia-lista">
-        <div class="guia-item">Cada atividade</div>
-        <div class="guia-item">Possui instruções</div>
-        <div class="guia-item">Para você aplicar da maneira correta</div>
-        <div class="guia-item">Acompanhando todo metodo de maneira facil</div>
-        <div class="guia-item">E aprendendo como manter seu filho conectado ao projeto aprendendo e se divertindo</div>
+        <div class="guia-item">Instrução clara em cada atividade do aplicativo</div>
+        <div class="guia-item">Orientação para conduzir o momento corretamente</div>
+        <div class="guia-item">Acompanhamento simples de todo o método</div>
+        <div class="guia-item">Suporte para manter a criança engajada, aprendendo e se divertindo</div>
       </div>
     </div>
   </div>
@@ -449,15 +428,14 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
   <div class="wrap">
     <h2 class="bloco-titulo">O Leitura Viva é para você<br><em>que:</em></h2>
     <div class="seg-lista">
-      <div class="seg-item">Tem um filho de 3 a 8 anos que ainda não lê ou lê com dificuldade</div>
-      <div class="seg-item">Quer ajudar em casa, mas não sabe por onde começar</div>
       <div class="seg-item">Tem cerca de 15 minutos por dia pra dedicar a isso</div>
       <div class="seg-item">Não tem experiência de professora e nunca teve</div>
-      <div class="seg-item">Quer uma rotina organizada, não atividades soltas</div>
+      <div class="seg-item">Quer uma rotina organizada dentro do aplicativo, não atividades soltas</div>
+      <div class="seg-item">Tem um celular ou tablet com acesso à internet em casa</div>
     </div>
     <div class="seg-nao">
-      <div class="seg-nao-titulo">Não é para você se</div>
-      <p>Seu filho já foi diagnosticado com uma condição que exige acompanhamento pedagógico, médico ou terapêutico específico. Nesse caso, o programa pode complementar, mas não substitui esse acompanhamento.</p>
+      <div class="seg-nao-titulo">Importante: não é para você se</div>
+      <p>Seu filho já foi diagnosticado com uma condição que exige acompanhamento pedagógico, médico ou terapêutico específico. Nesse caso, o aplicativo pode complementar, mas não substitui esse acompanhamento.</p>
     </div>
   </div>
 </section>
@@ -482,7 +460,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
   </div>
 </section>
 
-<!-- ══════ 12. OFERTA POR R$47 ══════ -->
+<!-- ══════ 12. OFERTA POR R$67 ══════ -->
 <section class="sec sec-branca" id="oferta">
   <div class="wrap">
     <span class="eyebrow">Sua oferta</span>
@@ -506,7 +484,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
 
       <div class="of-preco-wrap">
         <div class="of-de">Valor do programa completo: R$197</div>
-        <div class="of-preco">R$47</div>
+        <div class="of-preco">R$67,00</div>
       </div>
       <div class="of-parcela">Pagamento único · acesso de 1 ano</div>
 
@@ -619,7 +597,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
 <section class="sec sec-azul" style="text-align:center">
   <div class="wrap">
     <h2 class="bloco-titulo">21 dias para construir<br><em>uma rotina de aprendizado em casa.</em></h2>
-    <div style="font-family:'Baloo 2',cursive;font-size:2rem;font-weight:900;color:var(--am);margin:10px 0">R$47</div>
+    <div style="font-family:'Baloo 2',cursive;font-size:2rem;font-weight:900;color:var(--am);margin:10px 0">R$67,00</div>
     <div class="bloco-p" style="text-align:center">Pagamento único · acesso de 1 ano · garantia de 7 dias</div>
     <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn">Quero acesso ao aplicativo</a>
   </div>
@@ -636,7 +614,7 @@ footer{background:var(--tx);color:rgba(255,255,255,.4);text-align:center;padding
 function tFaq(btn){var item=btn.closest('.faq-item'),was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!was)item.classList.add('open')}
 
 window.addEventListener('load',function(){
-  if(window.fbq)fbq('track','ViewContent',{content_name:'Método Leitura Viva',content_ids:['metodo-leitura-viva'],content_type:'product',value:47.00,currency:'BRL'});
+  if(window.fbq)fbq('track','ViewContent',{content_name:'Método Leitura Viva',content_ids:['metodo-leitura-viva'],content_type:'product',value:67.00,currency:'BRL'});
 });
 </script>
 </body>
