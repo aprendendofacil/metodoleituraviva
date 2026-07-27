@@ -245,10 +245,7 @@ footer .foot-email{color:var(--am);text-decoration:underline;font-weight:700}
 footer .foot-aviso{color:rgba(255,255,255,.55);margin-top:26px;line-height:1.8}
 footer .foot-copy{margin-top:22px;color:rgba(255,255,255,.55)}
 
-.sticky-cta{position:fixed;left:0;right:0;bottom:-100px;z-index:999;background:var(--wh);border-top:1px solid var(--brd);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -6px 20px rgba(42,31,14,.12);transition:bottom .3s ease}
-.sticky-cta.show{bottom:0}
-.sticky-cta .btn{max-width:none;padding:13px 16px;font-size:.92rem}
-@media(min-width:781px){.sticky-cta{display:none}}
+
 </style>
 </head>
 <body>
@@ -491,7 +488,7 @@ Visual sugerido: foto real de mãe e filho lendo juntos, num momento tranquilo (
       <div class="of-preco-cartao">5x de R$9,40</div>
       <div class="of-preco-avista">ou R$47,00 à vista</div>
 
-      <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn btn-pulse">Quero conhecer o aplicativo</a>
+      <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn btn-pulse">Quero comprar agora</a>
 
       <img class="of-selos-img" src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/selos.webp?raw=true" alt="Compra segura · Satisfação garantida · Privacidade protegida">
     </div>
@@ -544,11 +541,6 @@ Visual sugerido: foto real de mãe e filho lendo juntos, num momento tranquilo (
       <div class="processo-item">Compromisso com atividades simples, seguras e adequadas pra idade da criança</div>
     </div>
     <p class="bloco-p" style="margin-top:6px">O Método VIVA (Ver, Interligar, Vivenciar, Aplicar) segue uma progressão reconhecida na alfabetização infantil: reconhecimento de letras e sons, formação de sílabas, construção de palavras e, por fim, leitura de frases — do mais simples para o mais complexo, sem pular etapas.</p>
-
-    <div style="margin-top:26px">
-      <a href="#oferta" class="btn btn-pulse">Quero tornar a leitura mais leve aqui em casa</a>
-      <div class="btn-sub">Acesso imediato após a confirmação do pagamento</div>
-    </div>
   </div>
 </section>
 
@@ -598,7 +590,7 @@ Visual sugerido: foto real de mãe e filho lendo juntos, num momento tranquilo (
       <div class="of-preco-cartao">5x de R$9,40</div>
       <div class="of-preco-avista">ou R$47,00 à vista</div>
 
-      <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn btn-pulse">Quero conhecer o aplicativo</a>
+      <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn btn-pulse">Quero comprar agora</a>
 
       <img class="of-selos-img" src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/selos.webp?raw=true" alt="Compra segura · Satisfação garantida · Privacidade protegida">
     </div>
@@ -641,34 +633,12 @@ Visual sugerido: foto real de mãe e filho lendo juntos, num momento tranquilo (
   </div>
 </footer>
 
-<div class="sticky-cta" id="stickyCta">
-  <a href="#oferta" class="btn">Quero tornar a leitura mais leve aqui em casa</a>
-</div>
-
 <script>
 function tFaq(btn){var item=btn.closest('.faq-item'),was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!was)item.classList.add('open')}
 
 window.addEventListener('load',function(){
   if(window.fbq)fbq('track','ViewContent',{content_name:'Método Leitura Viva',content_ids:['metodo-leitura-viva'],content_type:'product',value:47.00,currency:'BRL'});
 });
-
-(function(){
-  var sticky = document.getElementById('stickyCta');
-  var heroEl = document.querySelector('.hero');
-  var footerEl = document.querySelector('footer');
-  function onScroll(){
-    var heroBottom = heroEl.getBoundingClientRect().bottom;
-    var footerTop = footerEl.getBoundingClientRect().top;
-    var windowH = window.innerHeight;
-    if(heroBottom < 0 && footerTop > windowH){
-      sticky.classList.add('show');
-    } else {
-      sticky.classList.remove('show');
-    }
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-})();
 </script>
 </body>
 </html>
