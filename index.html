@@ -103,8 +103,8 @@ img{max-width:100%;display:block}
 .ident-titulo{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.25rem,5vw,1.7rem);line-height:1.3;color:#fff;margin-bottom:20px}
 .ident-titulo em{font-style:normal;color:var(--am)}
 .dor-sub-titulo{font-family:'Baloo 2',cursive;font-weight:800;font-size:clamp(1.05rem,4vw,1.3rem);line-height:1.35;color:var(--am);margin-bottom:22px}
-.dor-foto-wrap{width:100%;aspect-ratio:4/3;background:rgba(255,255,255,.05);border:2px dashed rgba(255,255,255,.25);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;margin-bottom:26px;overflow:hidden}
-.dor-foto-wrap img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.dor-foto-wrap{width:100%;background:rgba(255,255,255,.05);border:2px dashed rgba(255,255,255,.25);border-radius:16px;padding:12px;margin-bottom:26px;overflow:hidden;text-align:center}
+.dor-foto-wrap img{width:100%;height:auto;display:block;border-radius:12px}
 .dor-foto-wrap span{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.55);line-height:1.6}
 .dor-reforco{font-family:'Baloo 2',cursive;font-weight:900;font-size:clamp(1.2rem,4.6vw,1.55rem);line-height:1.35;color:#fff;text-align:center;margin:0}
 
@@ -187,8 +187,8 @@ img{max-width:100%;display:block}
 .of-de{font-size:.9rem;color:var(--txl);text-decoration:line-through;text-decoration-color:var(--la2);text-decoration-thickness:2px;font-weight:700;text-align:center}
 .of-preco-cartao{font-family:'Baloo 2',cursive;font-weight:900;font-size:2.3rem;color:var(--la);text-align:center;line-height:1.15;margin-top:6px}
 .of-preco-avista{font-size:1rem;font-weight:700;color:var(--txl);text-align:center;margin-top:6px;margin-bottom:22px}
-@keyframes btnPulse{0%,100%{box-shadow:0 5px 0 var(--vd2),0 8px 24px rgba(45,203,110,.35)}50%{box-shadow:0 5px 0 var(--vd2),0 8px 34px rgba(45,203,110,.7)}}
-.btn-pulse{animation:btnPulse 1.6s ease-in-out infinite}
+@keyframes btnGlowRing{0%{box-shadow:0 5px 0 var(--vd2),0 0 0 0 rgba(45,203,110,.55)}70%{box-shadow:0 5px 0 var(--vd2),0 0 0 18px rgba(45,203,110,0)}100%{box-shadow:0 5px 0 var(--vd2),0 0 0 0 rgba(45,203,110,0)}}
+.btn-pulse{animation:btnGlowRing 1.8s ease-out infinite}
 .of-selos-img{width:100%;max-width:340px;margin:18px auto 0;display:block}
 
 /* ═══ 10. CONVERSA SÉRIA ═══ */
@@ -257,8 +257,7 @@ footer .foot-copy{margin-top:22px;color:rgba(255,255,255,.55)}
 Visual sugerido: foto real de mãe e filho lendo juntos, num momento tranquilo (não posado/genérico de banco de imagens). -->
 <section class="hero">
   <div class="hero-logo-row">
-    <!-- Logo — substituir pelo arquivo real da logo do Método Leitura Viva -->
-    <img class="hero-logo" src="hhttps://github.com/aprendendofacil/metodoleituraviva/blob/main/logoleituraviva.png?raw=true" alt="Método Leitura Viva">
+    <img class="hero-logo" src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/logoleituraviva.png?raw=true" alt="Método Leitura Viva">
   </div>
 
   <div class="hero-painband">
@@ -270,20 +269,14 @@ Visual sugerido: foto real de mãe e filho lendo juntos, num momento tranquilo (
     <span class="hero-pill"><span class="ic">✓</span> 15 minutos por dia</span>
   </div>
 
-  <!-- Comparativo hoje x como pode ficar — uma única imagem (mandar o link da imagem final) -->
   <div class="hero-compare">
     <div class="hero-compare-img">
-      <div class="hero-compare-placeholder">
-        <span>[SUBSTITUIR PELO LINK DA IMAGEM: comparativo "Hoje" x "Como pode ficar"]</span>
-      </div>
-      <!-- Quando tiver o link, trocar o bloco acima por: -->
-      <!-- <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/PV-HERO.png?raw=true" alt="Comparativo hoje x como pode ficar"> -->
+      <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/PV-HERO.png?raw=true" alt="Comparativo hoje x como pode ficar">
     </div>
   </div>
 </section>
 
-<!-- ══════ BLOCO 2 — DEPOIMENTOS ══════
-Visual sugerido: fotos reais das mães (com autorização) ao lado do texto. Onde não houver depoimento real, manter o card de placeholder abaixo. -->
+<!-- ══════ BLOCO 2 — DEPOIMENTOS ══════ -->
 <section class="sec sec-clara">
   <div class="wrap">
     <span class="eyebrow">Relatos de quem já usa</span>
@@ -317,11 +310,9 @@ Visual sugerido: fotos reais das mães (com autorização) ao lado do texto. Ond
   </div>
 </section>
 
-<!-- ══════ BLOCO 3 — DOR LATENTE PRINCIPAL ══════
-Visual sugerido: ambiente escuro/aconchegante, ícones simples ao lado de cada pensamento (nada de fotos de criança chorando ou cenas dramáticas). -->
+<!-- ══════ BLOCO 3 — DOR LATENTE PRINCIPAL ══════ -->
 <section class="sec sec-preta">
   <div class="wrap">
-    <span class="eyebrow" style="color:var(--la)">Isso já passou pela sua cabeça?</span>
     <h2 class="ident-titulo">Eu sei... você tenta ajudar seu filho a praticar a leitura, <em>e mesmo assim o momento vira tensão</em>, não é mesmo?</h2>
     <h2 class="dor-sub-titulo">e você sofre quase todo dia com pensamentos como...</h2>
     <div class="dor-foto-wrap">
@@ -379,8 +370,7 @@ Visual sugerido: ambiente escuro/aconchegante, ícones simples ao lado de cada p
   </div>
 </section>
 
-<!-- ══════ BLOCO 5/6 — COMO FUNCIONA + O QUE VOCÊ RECEBE ══════
-Visual sugerido: card com imagem em caixa clara no topo, título e descrição — igual ao padrão de referência enviado. -->
+<!-- ══════ BLOCO 5/6 — COMO FUNCIONA + O QUE VOCÊ RECEBE ══════ -->
 <section class="sec sec-clara">
   <div class="wrap">
     <span class="eyebrow">Como funciona, na prática</span>
@@ -487,13 +477,12 @@ Visual sugerido: card com imagem em caixa clara no topo, título e descrição �
     <div class="oferta-card">
       <span class="of-ribbon">APROVADO</span>
 
-      <!-- Foto do produto — substituir pela imagem final (mockup/collage do app) -->
       <div class="of-product-img">
         <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/oferta.png?raw=true" alt="Aplicativo Método Leitura Viva">
       </div>
 
       <div class="of-logo-wrap">
-        <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/selos.webp?raw=true" alt="Método Leitura Viva">
+        <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/logoleituraviva.png?raw=true" alt="Método Leitura Viva">
       </div>
 
       <hr class="of-divider">
@@ -504,7 +493,7 @@ Visual sugerido: card com imagem em caixa clara no topo, título e descrição �
 
       <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn btn-pulse">Quero conhecer o aplicativo</a>
 
-      <img class="of-selos-img" src="selos.webp" alt="Compra segura · Satisfação garantida · Privacidade protegida">
+      <img class="of-selos-img" src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/selos.webp?raw=true" alt="Compra segura · Satisfação garantida · Privacidade protegida">
     </div>
   </div>
 </section>
@@ -595,13 +584,12 @@ Visual sugerido: card com imagem em caixa clara no topo, título e descrição �
     <div class="oferta-card" style="margin-top:0">
       <span class="of-ribbon">APROVADO</span>
 
-      <!-- Foto do produto — substituir pela imagem final (mockup/collage do app) -->
       <div class="of-product-img">
         <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/oferta.png?raw=true" alt="Aplicativo Método Leitura Viva">
       </div>
 
       <div class="of-logo-wrap">
-        <img src="hhttps://github.com/aprendendofacil/metodoleituraviva/blob/main/selos.webp?raw=true" alt="Método Leitura Viva">
+        <img src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/logoleituraviva.png?raw=true" alt="Método Leitura Viva">
       </div>
 
       <hr class="of-divider">
@@ -612,7 +600,7 @@ Visual sugerido: card com imagem em caixa clara no topo, título e descrição �
 
       <a href="https://pay.kirvano.com/273c0fa5-7301-49cf-b20f-b10eddede02a" class="btn btn-pulse">Quero conhecer o aplicativo</a>
 
-      <img class="of-selos-img" src="selos.webp" alt="Compra segura · Satisfação garantida · Privacidade protegida">
+      <img class="of-selos-img" src="https://github.com/aprendendofacil/metodoleituraviva/blob/main/selos.webp?raw=true" alt="Compra segura · Satisfação garantida · Privacidade protegida">
     </div>
   </div>
 </section>
